@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Volkhov", serif;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bloco {
+    display: flex;
+    background-color: #F4EEE0;
+    justify-content: center;
+    font-family: "Volkhov", serif;
+    width: 400px;
+    height: 470px;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: column;
+    margin-top: 30%;
+}
+
+.bloco img{ 
+    width: 40px;
+    height: 40px;
+}
+
+.bloco button{
+    width: 95px;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 17px;
+    background-color: #4F4557;
+    margin-left: 38%;
+    font-family: "Volkhov", serif;
+    margin-top: 20px;
+    color:#F4EEE0;
+    align-items: center;
+}
+
+.bloco .comConta{
+    margin-top: 5px;
+    margin-left: 18%;
+    font-size: 12px;
+}
+
+.bloco a{
+    text-decoration: none;
+    color: black;
+}
+
+.dadosCadastro{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 270px;
+    margin-left: 70px;
+}
+
+.dadosCadastro input{
+    border-radius: 5px;
+    height: 25px;
+    font-family:"Volkhov", serif;
+}
+
+.dadosCadastro span{
+    display: flex;
+    margin-top: 15px;
+}
+
+.seta-cabecalho{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.seta-cabecalho img{
+    display: flex;
+    margin-top: 18px;
+    margin-right: 15px;
+}
