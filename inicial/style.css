@@ -174,6 +174,7 @@ body{
     margin-left: 150px;
     margin-top: 20px;
     font-size: 18px;
+    text-align: end;
 }
 
 .artista2 h3{
@@ -182,3 +183,41 @@ body{
     margin-top: 50px;
     font-size: 25px;
 }
+
+.historia{
+    display: flex;
+    background-image: url(../assets/imagem2-carrossel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.historia h3{
+    margin-left: 100px;
+    margin-top: 40px;
+    font-size: 25px;
+    color: #F4EEE0;
+}
+
+.historia .artista img{
+    margin-bottom: 35px;
+    margin-right: 60px;
+}
+
+.historia .artista{
+    display: flex;
+    align-items: flex-start;
+}
+
+.historia .artista .info{
+    display: flex;
+    color: #F4EEE0;
+    margin: 10px 500px 50px 100px;
+}
+.historia .seta{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: row;
+}
+
