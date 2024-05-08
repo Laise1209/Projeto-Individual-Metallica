@@ -3,7 +3,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #6D5D6E;
-    font-family: "Volkhov", serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .imagem{
@@ -11,12 +11,6 @@ body{
     height: 50px;
     display: flex;
     justify-content: flex-start; 
-}
-
-.container{
-    width: 80%;
-    margin:auto;
-    display: flex;
 }
 
 .banner .navbar{
@@ -106,24 +100,57 @@ body{
     font-size: 20px; 
 }
 
+@keyframes changeColor{
+    0%{
+        filter: grayscale(100%);
+    }
+
+    50%{
+        filter: grayscale(50%);
+    }
+
+    100%{
+        filter: grayscale(0%);
+    }
+}
 .membros{
     display: flex;
-    background-color: #F4EEE0;
-    flex-direction: column;
-    border-radius: 20px;
-    margin: 30px 70px 0px 70px;
-    color: #4F4557;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.membros .card img{
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.membros .card img:hover{
+    animation: changeColor 7s ;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+    
 }
 
 .artista{
     display: flex;
     flex-direction: row;
+    animation: subir 1s;
 }
 
 .artista .info{
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 35px;
 }
 
 .artista img{
@@ -131,15 +158,15 @@ body{
     width: 300px;
     border-radius: 10px;
     margin-right: 35px;
-    margin-top: 35px;
+    margin-top: 130px;
     margin-left: 35px;
 }
 
 .artista .info p{
     display: flex;
-    margin-right: 150px;
-    margin-top: 20px;
+    margin-right: 40px;
     font-size: 18px;
+    text-align: justify;
 }
 
 .artista .info h3{
@@ -152,29 +179,30 @@ body{
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    animation: subir 1s;
 }
 
 .artista2 img{
     height: 300px;
     width: 300px;
     border-radius: 10px;
-    margin-right: 35px;
-    margin-top: 35px;
+    margin-top: 140px;
     margin-left: 35px;
 }
 
 .artista2 .info{
     display: flex;
     flex-direction: column;
-    margin-right: 40px;
+     margin-right: 40px; 
+    margin-left: 60px; 
 }
 
 .artista2 p{
     display: flex;
-    margin-left: 150px;
-    margin-top: 20px;
+    /* margin-left: 150px; */
     font-size: 18px;
-    text-align: end;
+    text-align: justify;
+
 }
 
 .artista2 h3{
@@ -221,3 +249,26 @@ body{
     flex-direction: row;
 }
 
+.carrossel{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    box-shadow: 2px 2px 2px black;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+}
+
+.carrossel .container{
+    display: flex;
+    transition: transform 0.5 ease-in-out;
+    transform: translateX(0);
+}
+
+.carrossel .container img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin: 0px 20px 0px 20px;
+    border-radius: 10px;
+}

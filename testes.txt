@@ -1,0 +1,14 @@
+button {
+  color: white;
+  background: blue;
+  transition: background 1s;
+}
+
+button:hover,
+button:focus {
+  background: red;
+}
+
+.quadrado {
+    animation: go-back 1s;
+}

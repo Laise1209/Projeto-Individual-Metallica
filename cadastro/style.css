@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: "Volkhov", serif;
+    font-family: "Nunito", sans-serif;
     display: flex;
     justify-content: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@ body{
     display: flex;
     background-color: #F4EEE0;
     justify-content: center;
-    font-family: "Volkhov", serif;
+    font-family: "Nunito", sans-serif;
     width: 400px;
     height: 470px;
     border-radius: 20px;
@@ -32,8 +32,8 @@ body{
     border-radius: 5px;
     font-size: 17px;
     background-color: #4F4557;
+    font-family: "Nunito", sans-serif;
     margin-left: 38%;
-    font-family: "Volkhov", serif;
     margin-top: 20px;
     color:#F4EEE0;
     align-items: center;
@@ -61,7 +61,7 @@ body{
 .dadosCadastro input{
     border-radius: 5px;
     height: 25px;
-    font-family:"Volkhov", serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .dadosCadastro span{
