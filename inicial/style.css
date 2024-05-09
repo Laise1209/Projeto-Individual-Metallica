@@ -101,33 +101,32 @@ body{
 }
 
 @keyframes changeColor{
-    0%{
-        filter: grayscale(100%);
-    }
-
-    50%{
-        filter: grayscale(50%);
-    }
-
-    100%{
+    to{
         filter: grayscale(0%);
     }
+    from{
+        filter: grayscale(100%);
+    }
 }
+
 .membros{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .membros .card img{
     height: 400px;
     width: 300px;
     border-radius: 10px;
+    filter: grayscale(100%);
 }
 
 .membros .card img:hover{
-    animation: changeColor 7s ;
+    animation: changeColor 1s infinite;
 }
 
 @keyframes subir {
@@ -136,9 +135,7 @@ body{
     }
     100% {
         transform: translateY(0);
-    }
-
-    
+    }  
 }
 
 .artista{
@@ -249,23 +246,28 @@ body{
     flex-direction: row;
 }
 
-.carrossel{
+.carousel{
     display: flex;
     flex-direction: row;
     margin-top: 35px;
     box-shadow: 2px 2px 2px black;
-    overflow: hidden;
+    /* overflow: hidden; */
     height: 200px;
     width: 200px;
 }
 
-.carrossel .container{
+/* .carrossel .container{
     display: flex;
+    width: 900px;
     transition: transform 0.5 ease-in-out;
     transform: translateX(0);
-}
+} */
+/* 
+@keyframe transicaoCarrossel{
+    
+} */
 
-.carrossel .container img{
+.carousel img{
     object-fit: cover;
     width: 200px;
     height: 200px;
