@@ -100,14 +100,14 @@ body{
     font-size: 20px; 
 }
 
-@keyframes changeColor{
+/* @keyframes changeColor{
     to{
         filter: grayscale(0%);
     }
     from{
         filter: grayscale(100%);
     }
-}
+} */
 
 .membros{
     display: flex;
@@ -126,7 +126,8 @@ body{
 }
 
 .membros .card img:hover{
-    animation: changeColor 1s infinite;
+    filter: grayscale(0%);
+    transition: 1s;
 }
 
 @keyframes subir {
@@ -164,12 +165,14 @@ body{
     background-size: cover;
     flex-direction: column;
     margin-top: 40px;
+    
 }
 .historia h3{
     margin-left: 100px;
     margin-top: 40px;
     font-size: 25px;
     color: #F4EEE0;
+    animation: subir 1s;
 }
 
 .historia .artista img{
@@ -216,7 +219,6 @@ body{
 }
 
 .carrossel .setas{
-    /* flex-direction: row; */
     height: 40px;
     width: 40px;
     margin-top: 50px;
