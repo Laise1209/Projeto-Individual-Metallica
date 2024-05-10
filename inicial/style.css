@@ -150,15 +150,6 @@ body{
     margin-left: 35px;
 }
 
-.artista img{
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-    margin-right: 35px;
-    margin-top: 130px;
-    margin-left: 35px;
-}
-
 .artista .info p{
     display: flex;
     margin-right: 40px;
@@ -166,52 +157,9 @@ body{
     text-align: justify;
 }
 
-.artista .info h3{
-    display: flex;
-    margin-top: 40px;
-    font-size: 25px;
-}
-
-.artista2{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 30px;
-    animation: subir 1s;
-}
-
-.artista2 img{
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
-    margin-top: 140px;
-    margin-left: 35px;
-}
-
-.artista2 .info{
-    display: flex;
-    flex-direction: column;
-     margin-right: 40px; 
-    margin-left: 60px; 
-}
-
-.artista2 p{
-    display: flex;
-    /* margin-left: 150px; */
-    font-size: 18px;
-    text-align: justify;
-
-}
-
-.artista2 h3{
-    display: flex;
-    justify-content: right;
-    margin-top: 50px;
-    font-size: 25px;
-}
-
 .historia{
     display: flex;
-    background-image: url(../assets/imagem2-carrossel.jpg);
+    background-image: url(../assets/historia-carrossel/imagem1-carrossel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
@@ -239,38 +187,43 @@ body{
     color: #F4EEE0;
     margin: 10px 500px 50px 100px;
 }
-.historia .seta{
-    display: flex;
-    width: 40px;
-    height: 40px;
-    flex-direction: row;
-}
 
-.carousel{
+.carrossel{
     display: flex;
-    flex-direction: row;
-    margin-top: 35px;
-    box-shadow: 2px 2px 2px black;
-    /* overflow: hidden; */
-    height: 200px;
+    flex-direction: row; 
     width: 200px;
+    margin-top: 35px;
 }
 
-/* .carrossel .container{
+.carrossel .container{
     display: flex;
-    width: 900px;
-    transition: transform 0.5 ease-in-out;
-    transform: translateX(0);
-} */
-/* 
-@keyframe transicaoCarrossel{
+    width: 1340px;
+    transition: transform 0.5 ease;
+    transform: translateX(0) infinite;
+}
+
+/* @keyframe transicaoCarrossel{
     
 } */
-
-.carousel img{
-    object-fit: cover;
+  
+.carrossel img{
+    display: flex;
+    flex-direction: row; 
     width: 200px;
     height: 200px;
     margin: 0px 20px 0px 20px;
     border-radius: 10px;
+}
+
+.carrossel .setas{
+    /* flex-direction: row; */
+    height: 40px;
+    width: 40px;
+    margin-top: 50px;
+}
+
+.albuns h3{
+    margin-left: 100px;
+    font-size: 25px;
+    color: #F4EEE0;
 }
