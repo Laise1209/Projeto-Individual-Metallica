@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Metallica</title>
+<!-- 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    
 </head>
 <body>
     <div class="banner">
@@ -88,90 +93,45 @@
 
     <div class="albuns" id="albuns">
         <h3>Álbuns</h3>
-    <div class="carrossel">
         <img onclick="botaoEsquerdo()" class="setas" src="../assets/seta-esquerda.png" alt="seta de voltar">
-        <div class="container" id="img">
-            <img src="../assets/albuns/master-of-puppets.jpeg" alt="Master of puppets">
-            <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning">
-            <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all">
-            <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic">
-            <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all">
-            <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons">
-            <img src="../assets/albuns/load.jpeg" alt="Load">
-            <img src="../assets/albuns/reload.jpeg" alt="">
-            <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica">
-            <img src="../assets/albuns/lulu.jpeg" alt="Lulu">
-            <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger">
+
+        <div class="carrossel">
+            <div><img src="../assets/albuns/master-of-puppets.jpeg" alt="Master of puppets"></div>
+            <div> <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning"></div>
+            <div> <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all"></div>
+            <div> <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic"></div>
+            <div> <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all"></div>
+            <div> <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons"></div>
+            <div> <img src="../assets/albuns/load.jpeg" alt="Load"></div>
+            <div> <img src="../assets/albuns/reload.jpeg" alt=""></div>
+            <div> <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica"></div>
+            <div> <img src="../assets/albuns/lulu.jpeg" alt="Lulu"></div>
+            <div> <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger"></div>
         </div>
+
         <img onclick="botaoDireito()" class="setas" src="../assets/seta-direita.png" alt="seta de voltar">
     </div>
-    </div>
 
-    <ul class="slider">
-        <li>
-              <input type="radio" id="slide1" name="slide" checked>
-              <label for="slide1"></label>
-              <img src="../assets/albuns/master-of-puppets.jpeg" />
-        </li>
-        <li>
-              <input type="radio" id="slide2" name="slide">
-              <label for="slide2"></label>
-              <img src="../assets/albuns/ride-the-lightning.jpeg" />
-        </li>
-        <li>
-              <input type="radio" id="slide3" name="slide">
-              <label for="slide3"></label>
-              <img src="../assets/albuns/andJusticeForAll.jpeg" />
-        </li>
-    </ul>
-</body>
-
-</html>
-<script>
-
-    //fução carrossel
-
-    function botaoDireito(){
-        const imgs = document.getElementById("img");
-        const img = document.querySelectorAll("#img img");
-
-        let idx = 0;
-
-        function carrossel(){
-            idx++;
-
-            if(idx > img.length){
-                idx = 0;
-            }
-
-            imgs.style.transform = `translateX(${-idx * 300}px)`;
-            imgs.style.transition = `ease`;
-        }
-
-        setInterval(carrossel, 1000);
-    }
-
-    function botaoEsquerdo(){
-        const imgs = document.getElementById("img");
-        const img = document.querySelectorAll("#img img");
-
-        let idx = 0;
-
-        function carrossel(){
-            idx--;
-
-            if(idx > img.length){
-                idx = 0;
-            }
-
-            imgs.style.transform = `translateX(${idx * 300}px)`;
-            imgs.style.transition = `ease`;
-        }
-
-        setInterval(carrossel, 1000);
-    }
     
+</body>
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<script type="text/javascript">
+    //fução carrossel
+    $(document).ready(function(){
+        $('.carrossel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+        });
+    });
+</script> -->
+</html>
+
+<script>  
     // função pra scrollar pra baixo quando clica na navbar
     $(document).ready(function(){
         // Adiciona a função de rolagem suave para os links da barra de navegação
@@ -211,23 +171,4 @@
             }
         });
     });
-    // $(document).ready(function(){
-    //     // Adiciona a função de rolagem suave para os links da barra de navegação
-    //     $(".butao a").on('click', function(event) {
-    //         if (this.hash !== "") {
-    //             event.preventDefault();
-    
-    //             // Armazena o hash
-    //             var hash = this.hash;
-    
-    //             // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
-    //             $('html, body').animate({
-    //                 scrollTop: $(hash).offset().top
-    //             }, 800, function(){
-    //                 // Adiciona o hash (#) à URL quando terminar de rolar
-    //                 window.location.hash = hash;
-    //             });
-    //         }
-    //     });
-    // });
 </script>

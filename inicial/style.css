@@ -37,10 +37,8 @@ body{
     flex-direction: row;
 }
 .banner .cadastros{
-    width: 100%;
     display: flex;
-    justify-content: right;
-    margin-left: 10px;
+    justify-content: center;
 }
 
 .banner{
@@ -52,10 +50,11 @@ body{
 }
 
 .login{
-    width: 110px;
+    width: fit-content;
     list-style: none;
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     margin-right: 10px;
     background-color: #4F4557;
     border-radius: 10px;
@@ -67,6 +66,11 @@ body{
     font-size: 20px;
 }
 
+.login li{
+    display: flex;
+    margin-right: 35px;
+    margin-left: 0px;
+}
 .signin{
     width: 110px;
     list-style: none;
@@ -218,7 +222,7 @@ body{
     border-radius: 10px;
 }
 
-.carrossel .setas{
+.albuns .setas{
     height: 40px;
     width: 40px;
     margin-top: 50px;
@@ -228,63 +232,4 @@ body{
     margin-left: 100px;
     font-size: 25px;
     color: #F4EEE0;
-}
-
-.slider {
-    display: block;
-    height: 293px;
-    width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    position: relative;
-}
-
-.slider li {
-    list-style: none;
-    position: absolute;
-}
-
-.slider img {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    vertical-align: top;
-}
-
-.slider input {
-    display: none;
-}
-
-.slider label {
-    background-color: #000;
-    bottom: 10px;
-    cursor: pointer;
-    display: block;
-    height: 10px;
-    position: absolute;
-    width: 10px;
-    z-index: 10;
-}
-
-.slider li:nth-child(1) label {
-    left: 10px;
-}
-
-.slider li:nth-child(2) label {
-    left: 40px;
-}
-
-.slider li:nth-child(3) label {
-    left: 70px;
-}
-
-.slider img {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.slider li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
 }
