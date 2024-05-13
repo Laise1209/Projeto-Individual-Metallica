@@ -121,3 +121,27 @@ JS CARROSSEL
 
         setInterval(carrossel, 1000);
     }
+
+-- -- -- -- -- -- --- -- --- -- --- -- --
+IMAGENS NA ORDEM
+
+<!-- <div class="albuns" id="albuns">
+        <h3>Álbuns</h3>
+        <img onclick="botaoEsquerdo()" class="setas" src="../assets/seta-esquerda.png" alt="seta de voltar">
+
+        <div class="carrossel">
+            <div><img src="../assets/albuns/master-of-puppets.jpeg" alt="Master of puppets"></div>
+            <div> <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning"></div>
+            <div> <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all"></div>
+            <div> <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic"></div>
+            <div> <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all"></div>
+            <div> <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons"></div>
+            <div> <img src="../assets/albuns/load.jpeg" alt="Load"></div>
+            <div> <img src="../assets/albuns/reload.jpeg" alt=""></div>
+            <div> <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica"></div>
+            <div> <img src="../assets/albuns/lulu.jpeg" alt="Lulu"></div>
+            <div> <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger"></div>
+        </div>
+
+        <img onclick="botaoDireito()" class="setas" src="../assets/seta-direita.png" alt="seta de voltar">
+    </div> -->
