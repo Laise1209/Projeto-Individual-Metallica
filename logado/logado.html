@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Metallica</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="menu"></div>
+            <div class="secoes">
+                <a href="#bandas">
+                    <span>Bandas</span>
+                </a>
+    
+                <a href="#quiz">
+                    <span>Quiz</span>
+                </a>
+    
+                <a href="#dashboard">
+                    <span>Dashboard</span>
+                </a>
+            </div>
+        </div>
+
+        <span class="frase1">Olá ${usuário}</span>
+        <span class="frase2">Seja bem vindo a sua conta!</span>
+    </div>
+   
+    <div class="bandas" id="bandas">
+        <h2>Bandas que você pode gostar:</h2>
+
+        <div class="bandas-linha">
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/megadeth.jpeg" alt="Megadeth">
+                </a>
+                <p>Megadeth</p>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/avengedsevenfold.jpeg" alt="Avenged Sevenfold">
+                </a>
+                <p>Avenged Sevenfold</p>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/ironmaiden.jpeg" alt="Iron Maiden">
+                </a>
+                <p>Iron Maiden</p>
+            </div>
+        </div>
+
+        <div class="bandas-linha">
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/pantera.jpeg" alt="Pantera">
+                </a>
+                <p>Pantera</p>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/testament.jpeg" alt="Testament">
+                </a>
+                <p>Testament</p>
+            </div>
+
+            <div class="card">
+                <a href="">
+                    <img src="../assets/bandas/disturbed.jpeg" alt="Disturbed">
+                </a>
+                <p>Disturbed</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quiz" id="quiz">
+        <h2>Teste seus conhecimentos sobre o METALLICA</h2>
+            <div class="perguntas"></div>
+            <span>Pergunta 1</span>
+
+            <p>Antes de ser Metallica, qual foi o primeiro nome da banda?</p>
+
+            <div class="alternativas">
+                <input type='radio' id="alternativa1"> <span>Metal Mania</span> <br>
+                <input type='radio' id="alternativa2"> <span>The Young Metal Attack</span> <br>
+                <input type='radio' id="alternativa3"> <span>Monster</span> <br>
+                <input type='radio' id="alternativa4"> <span>Ron McGovney Garage</span> <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script> 
+
+    // função pra scrollar pra baixo quando clica na navbar
+    $(document).ready(function(){
+        // Adiciona a função de rolagem suave para os links da barra de navegação
+        $(".navbar a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+    
+                // Armazena o hash
+                var hash = this.hash;
+    
+                // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    // Adiciona o hash (#) à URL quando terminar de rolar
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+
+    $(document).ready(function(){
+        // Adiciona a função de rolagem suave para os links da barra de navegação
+        $(".footer a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+    
+                // Armazena o hash
+                var hash = this.hash;
+    
+                // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    // Adiciona o hash (#) à URL quando terminar de rolar
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>

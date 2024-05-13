@@ -91,7 +91,34 @@
         </div>
     </div>
 
-    
+    <div class="albuns" id="albuns">
+        <h3>Álbuns</h3>
+       
+
+        <div class="carrossel">
+            <img onclick="botaoEsquerdo()" class="setas" src="../assets/seta-esquerda.png" alt="seta de voltar">
+            <div id="divCarrossel">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            
+            <!-- <div><img src="../assets/albuns/master-of-puppets.jpeg" alt="Master of puppets"></div>
+            <div> <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning"></div>
+            <div> <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all"></div>
+            <div> <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic"></div>
+            <div> <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all"></div>
+            <div> <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons"></div>
+            <div> <img src="../assets/albuns/load.jpeg" alt="Load"></div>
+            <div> <img src="../assets/albuns/reload.jpeg" alt=""></div>
+            <div> <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica"></div>
+            <div> <img src="../assets/albuns/lulu.jpeg" alt="Lulu"></div>
+            <div> <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger"></div> -->
+        <img onclick="botaoDireito()" class="setas" src="../assets/seta-direita.png" alt="seta de voltar">
+
+        </div>
+
+    </div>
     
 </body>
 <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -110,69 +137,26 @@
     });
 </script> -->
 </html>
+
 <script>
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import img from "assets"  
-import img2 from "assets" 
-import img3 from "assets" 
+    var imagens = []
+    var master_of_puppets = `<img src="../assets/albuns/master-of-puppets.jpeg">`
+    var ride_the_lighning = `<img src="../assets/albuns/ride-the-lightning.jpeg"`;
+    var kill_em_all = `<img src="../assets/albuns/kill-em-all.jpeg">`;
+    var deth_magnetic = `<img src="../assets/albuns/deathMagnetic.jpeg">`
+    var and_justice_for_all = `<img src="../assets/albuns/andJusticeForAll.jpeg">`
+    var seasons = `<img src="../assets/albuns/72seasons.jpeg">`
+    var load = `<img src="../assets/albuns/load.jpeg">`
+    var reload = `<img src="../assets/albuns/reload.jpeg">`
+    var metallica = `<img src="../assets/albuns/metallicaalbum.jpeg">`
+    var lulu = `<img src="../assets/albuns/lulu.jpeg">`;
+    var stAnger = `<img src="../assets/albuns/stAnger.jpeg">`
 
-const CarouselWithSlick = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
+     function botaoDireito(){
+        imagens = [master_of_puppets, ride_the_lighning, kill_em_all, deth_magnetic, and_justice_for_all, seasons, load, reload, metallica, lulu, stAnger];
 
-  return (
-    <div>
-      <h2>Albuns</h2>
-      <Slider {...settings}>
-        <div>
-          <img src="../assets/albuns/master-of-puppets.jpeg" alt="Imagem 1" />
-        </div>
-        <div>
-          <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning"/>
-        </div>
-        <div>
-            <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all" />
-        </div>
-        <div> 
-            <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/load.jpeg" alt="Load"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/reload.jpeg" alt=""/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/lulu.jpeg" alt="Lulu"/>
-        </div>
-        <div> 
-            <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger"/>
-        </div>
-      </Slider>
-    </div>
-  );
-};
-
-export default CarouselWithSlick;
+        divCarrossel.innerHTML = imagens[1, 2, 3];
+    }
 </script>
 <script>  
     // função pra scrollar pra baixo quando clica na navbar
