@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
     <title>Metallica</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
-    
+
 </head>
+
 <body>
     <div class="banner">
         <div class="cabecalho">
@@ -43,7 +45,7 @@
                     <a href="../cadastro/signin.html">
                         <li> Cadastrar </li>
                     </a>
-                </ul>       
+                </ul>
             </div>
         </div>
     </div>
@@ -57,7 +59,7 @@
         <div class="card">
             <a href="../artistas/james.html">
                 <img src="../assets/cards-artistas/james-card.jpeg" alt="">
-            </a>           
+            </a>
         </div>
         <div class="card">
             <a href="../artistas/kirk.html">
@@ -76,122 +78,136 @@
         </div>
     </div>
 
-    
+
     <div class="historia" id="historia">
         <h3>História da banda</h3>
-            <div class="artista">
-                <div class="info">
-                    <p>O nome Metallica surgiu de uma conversa de Ulrich, fundador da banda, com seu amigo Ron Quintana, que criava nomes para um fanzine. Nesse sentido, ele sugeriu as opções Metal Mania e Metallica, sendo o último o escolhido. Na época, o grupo estava em processo de formação, após o baterista Lars Ulrich anunciar em um jornal que procurava músicos para uma banda. Depois de conhecer o guitarrista James Hetfield, um novo anúncio foi colocado, dessa vez reforçando a necessidade de um baixista.</p>
+        <div class="artista">
+            <div class="info">
+                <p>O nome Metallica surgiu de uma conversa de Ulrich, fundador da banda, com seu amigo Ron Quintana, que
+                    criava nomes para um fanzine. Nesse sentido, ele sugeriu as opções Metal Mania e Metallica, sendo o
+                    último o escolhido. Na época, o grupo estava em processo de formação, após o baterista Lars Ulrich
+                    anunciar em um jornal que procurava músicos para uma banda. Depois de conhecer o guitarrista James
+                    Hetfield, um novo anúncio foi colocado, dessa vez reforçando a necessidade de um baixista.</p>
 
-                    <p>Mas, ao invés de um baixista aparecer, o vocalista e guitarrista Dave Mustaine respondeu ao anúncio, impressionando não só pela sonoridade, mas também pelo equipamento caro. Assim, no fim de 1981, nascia o Metallica. A banda gravou sua primeira canção autoral no ano seguinte, com repercussão suficiente para agendar seu primeiro show.</p> 
-                    
-                    <p>Agora com Ron McGovney no baixo, a banda gravou sua primeira demo, No Life ’til Leather. Mas, quando James e Lars assistiram a uma apresentação de Cliff Burton em uma casa noturna, tiveram a certeza de que ele deveria se juntar a eles.ara isso, dispensaram McGovney, reorganizaram a rota da banda e se prepararam para o álbum de estreia. Ao conseguirem uma gravadora, a Megaforce Records, dispensaram também Dave, substituindo-o por Kirk Hammett, do Exodus. Aqui, começava não apenas a história do Metallica, mas também a do Megadeth, fundada por Mustaine</p>
-                    
-                </div>
+                <p>Mas, ao invés de um baixista aparecer, o vocalista e guitarrista Dave Mustaine respondeu ao anúncio,
+                    impressionando não só pela sonoridade, mas também pelo equipamento caro. Assim, no fim de 1981,
+                    nascia o Metallica. A banda gravou sua primeira canção autoral no ano seguinte, com repercussão
+                    suficiente para agendar seu primeiro show.</p>
+
+                <p>Agora com Ron McGovney no baixo, a banda gravou sua primeira demo, No Life ’til Leather. Mas, quando
+                    James e Lars assistiram a uma apresentação de Cliff Burton em uma casa noturna, tiveram a certeza de
+                    que ele deveria se juntar a eles.ara isso, dispensaram McGovney, reorganizaram a rota da banda e se
+                    prepararam para o álbum de estreia. Ao conseguirem uma gravadora, a Megaforce Records, dispensaram
+                    também Dave, substituindo-o por Kirk Hammett, do Exodus. Aqui, começava não apenas a história do
+                    Metallica, mas também a do Megadeth, fundada por Mustaine</p>
+
+            </div>
         </div>
     </div>
 
     <div class="albuns" id="albuns">
         <h3>Álbuns</h3>
-       
 
-        <div class="carrossel">
-            <img onclick="botaoEsquerdo()" class="setas" src="../assets/seta-esquerda.png" alt="seta de voltar">
-            <div id="divCarrossel">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+        <div class="carousel">
+
+            <button class="button prev" onclick="moveSlide(-1)">❮</button>
+
+            <div class="carousel-container">
+
+                <div class="carousel-item"><img src="../assets/albuns/master-of-puppets.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/ride-the-lightning.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/kill-em-all.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/deathMagnetic.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/andJusticeForAll.jpeg"></div>
+
+                <div class="carousel-item"> <img src="../assets/albuns/72seasons.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/72seasons.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/load.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/reload.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/lulu.jpeg"></div>
+
+                <div class="carousel-item"><img src="../assets/albuns/stAnger.jpeg"></div>
             </div>
-            
-            <!-- <div><img src="../assets/albuns/master-of-puppets.jpeg" alt="Master of puppets"></div>
-            <div> <img src="../assets/albuns/ride-the-lightning.jpeg" alt="Ride the lightning"></div>
-            <div> <img src="../assets/albuns/kill-em-all.jpeg" alt="Kil 'em all"></div>
-            <div> <img src="../assets/albuns/deathMagnetic.jpeg" alt="Death Magnetic"></div>
-            <div> <img src="../assets/albuns/andJusticeForAll.jpeg" alt="And justice for all"></div>
-            <div> <img src="../assets/albuns/72seasons.jpeg" alt="72 Seasons"></div>
-            <div> <img src="../assets/albuns/load.jpeg" alt="Load"></div>
-            <div> <img src="../assets/albuns/reload.jpeg" alt=""></div>
-            <div> <img src="../assets/albuns/metallicaalbum.jpeg" alt="Metallica"></div>
-            <div> <img src="../assets/albuns/lulu.jpeg" alt="Lulu"></div>
-            <div> <img src="../assets/albuns/stAnger.jpeg" alt="St. Anger"></div> -->
-        <img onclick="botaoDireito()" class="setas" src="../assets/seta-direita.png" alt="seta de voltar">
+
+            <button class="button next" onclick="moveSlide(1)">❯</button>
 
         </div>
 
     </div>
-    
-</body>
-<!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<script type="text/javascript">
-    //fução carrossel
-    $(document).ready(function(){
-        $('.carrossel').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-        });
-    });
-</script> -->
-</html>
 
 <script>
-    var imagens = []
-    var master_of_puppets = `<img src="../assets/albuns/master-of-puppets.jpeg">`
-    var ride_the_lighning = `<img src="../assets/albuns/ride-the-lightning.jpeg"`;
-    var kill_em_all = `<img src="../assets/albuns/kill-em-all.jpeg">`;
-    var deth_magnetic = `<img src="../assets/albuns/deathMagnetic.jpeg">`
-    var and_justice_for_all = `<img src="../assets/albuns/andJusticeForAll.jpeg">`
-    var seasons = `<img src="../assets/albuns/72seasons.jpeg">`
-    var load = `<img src="../assets/albuns/load.jpeg">`
-    var reload = `<img src="../assets/albuns/reload.jpeg">`
-    var metallica = `<img src="../assets/albuns/metallicaalbum.jpeg">`
-    var lulu = `<img src="../assets/albuns/lulu.jpeg">`;
-    var stAnger = `<img src="../assets/albuns/stAnger.jpeg">`
+    const container = document.querySelector('.carousel-container');
 
-     function botaoDireito(){
-        imagens = [master_of_puppets, ride_the_lighning, kill_em_all, deth_magnetic, and_justice_for_all, seasons, load, reload, metallica, lulu, stAnger];
+    const slides = Array.from(container.children);
 
-        divCarrossel.innerHTML = imagens[1, 2, 3];
-    }
+    const slideWidth = slides[0].offsetWidth + 20;
+        // width + margin
+
+        function
+            moveSlide(direction) {
+
+            if (direction === 1) {
+                container.appendChild(container.firstElementChild);
+            } else {
+                container.insertBefore(container.lastElementChild,
+                container.firstElementChild);
+
+            }
+
+            container.style.transition = 'none';
+
+            container.style.transform = 'none';
+        }
 </script>
-<script>  
+
+</body>
+
+</html>
+
+
+<script>
     // função pra scrollar pra baixo quando clica na navbar
-    $(document).ready(function(){
+    $(document).ready(function () {
         // Adiciona a função de rolagem suave para os links da barra de navegação
-        $(".navbar a").on('click', function(event) {
+        $(".navbar a").on('click', function (event) {
             if (this.hash !== "") {
                 event.preventDefault();
-    
+
                 // Armazena o hash
                 var hash = this.hash;
-    
+
                 // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 800, function () {
                     // Adiciona o hash (#) à URL quando terminar de rolar
                     window.location.hash = hash;
                 });
             }
         });
     });
-    $(document).ready(function(){
+    $(document).ready(function () {
         // Adiciona a função de rolagem suave para os links da barra de navegação
-        $(".footer a").on('click', function(event) {
+        $(".footer a").on('click', function (event) {
             if (this.hash !== "") {
                 event.preventDefault();
-    
+
                 // Armazena o hash
                 var hash = this.hash;
-    
+
                 // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 800, function(){
+                }, 800, function () {
                     // Adiciona o hash (#) à URL quando terminar de rolar
                     window.location.hash = hash;
                 });

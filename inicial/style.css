@@ -1,47 +1,47 @@
-
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #6D5D6E;
     font-family: "Nunito", sans-serif;
 }
 
-.imagem{
+.imagem {
     width: 100px;
     height: 50px;
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
-.banner .navbar{
+.banner .navbar {
     width: 500px;
     list-style: none;
     display: flex;
     justify-content: space-around;
 }
 
-.navbar a{
+.navbar a {
     text-decoration: none;
-    color:#F4EEE0;
+    color: #F4EEE0;
     font-size: 25px;
 }
 
-.banner .container{
+.banner .container {
     width: 80%;
-    margin:auto;
+    margin: auto;
     display: flex;
 }
 
-.cabecalho{
+.cabecalho {
     display: flex;
     flex-direction: row;
 }
-.banner .cadastros{
+
+.banner .cadastros {
     display: flex;
     justify-content: center;
 }
 
-.banner{
+.banner {
     background-image: url(../assets/banner5.webp);
     height: 680px;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body{
     color: white;
 }
 
-.login{
+.login {
     width: fit-content;
     list-style: none;
     display: flex;
@@ -60,18 +60,19 @@ body{
     border-radius: 10px;
 }
 
-.login a{
+.login a {
     text-decoration: none;
     color: #F4EEE0;
     font-size: 20px;
 }
 
-.login li{
+.login li {
     display: flex;
     margin-right: 35px;
     margin-left: 0px;
 }
-.signin{
+
+.signin {
     width: 110px;
     list-style: none;
     display: flex;
@@ -80,13 +81,13 @@ body{
     border-radius: 10px;
 }
 
-.signin a{
+.signin a {
     text-decoration: none;
     color: #F4EEE0;
     font-size: 20px;
 }
 
-.frase{
+.frase {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -99,9 +100,9 @@ body{
     font-size: 30px;
 }
 
-.frase .parte2{
+.frase .parte2 {
     margin-left: 11%;
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 /* @keyframes changeColor{
@@ -113,7 +114,7 @@ body{
     }
 } */
 
-.membros{
+.membros {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -122,14 +123,14 @@ body{
     margin-right: 15px;
 }
 
-.membros .card img{
+.membros .card img {
     height: 400px;
     width: 300px;
     border-radius: 10px;
     filter: grayscale(100%);
 }
 
-.membros .card img:hover{
+.membros .card img:hover {
     filter: grayscale(0%);
     transition: 1s;
 }
@@ -138,40 +139,42 @@ body{
     0% {
         transform: translateY(50px);
     }
+
     100% {
         transform: translateY(0);
-    }  
+    }
 }
 
-.artista{
+.artista {
     display: flex;
     flex-direction: row;
     animation: subir 1s;
 }
 
-.artista .info{
+.artista .info {
     display: flex;
     flex-direction: column;
     margin-left: 35px;
 }
 
-.artista .info p{
+.artista .info p {
     display: flex;
     margin-right: 40px;
     font-size: 18px;
     text-align: justify;
 }
 
-.historia{
+.historia {
     display: flex;
     background-image: url(../assets/historia-carrossel/imagem1-carrossel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;
     margin-top: 40px;
-    
+
 }
-.historia h3{
+
+.historia h3 {
     margin-left: 100px;
     margin-top: 40px;
     font-size: 25px;
@@ -179,30 +182,30 @@ body{
     animation: subir 1s;
 }
 
-.historia .artista img{
+.historia .artista img {
     margin-bottom: 35px;
     margin-right: 60px;
 }
 
-.historia .artista{
+.historia .artista {
     display: flex;
     align-items: flex-start;
 }
 
-.historia .artista .info{
+.historia .artista .info {
     display: flex;
     color: #F4EEE0;
     margin: 10px 500px 50px 100px;
 }
 
-.carrossel{
+.carrossel {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     width: 200px;
     margin-top: 35px;
 }
 
-.carrossel .container{
+.carrossel .container {
     display: flex;
     width: 1340px;
     transition: transform 0.5 ease;
@@ -212,24 +215,73 @@ body{
 /* @keyframe transicaoCarrossel{
     
 } */
-  
-.carrossel img{
+
+.carrossel img {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     width: 200px;
     height: 200px;
     margin: 0px 20px 0px 20px;
     border-radius: 10px;
 }
 
-.albuns .setas{
+.albuns .setas {
     height: 40px;
     width: 40px;
     margin-top: 50px;
 }
 
-.albuns h3{
+.albuns h3 {
     margin-left: 100px;
     font-size: 25px;
     color: #F4EEE0;
+}
+
+.carousel {
+    display: flex;
+    width: 600px;
+    overflow: hidden;
+    position:relative;
+    margin: 20px auto;
+
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+
+}
+
+.carousel-item {
+    flex: 0 0 100px;
+    height: 300px;
+    margin: 0 10px;
+    /* background-color:#ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-color: ;
+    border: 2px solid #000; */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 20px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
