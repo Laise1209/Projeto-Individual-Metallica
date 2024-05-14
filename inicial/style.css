@@ -205,18 +205,7 @@ body {
     margin-top: 35px;
 }
 
-.carrossel .container {
-    display: flex;
-    width: 1340px;
-    transition: transform 0.5 ease;
-    transform: translateX(0) infinite;
-}
-
-/* @keyframe transicaoCarrossel{
-    
-} */
-
-.carrossel img {
+.carorusel img {
     display: flex;
     flex-direction: row;
     width: 200px;
@@ -225,11 +214,7 @@ body {
     border-radius: 10px;
 }
 
-.albuns .setas {
-    height: 40px;
-    width: 40px;
-    margin-top: 50px;
-}
+
 
 .albuns h3 {
     margin-left: 100px;
@@ -239,7 +224,7 @@ body {
 
 .carousel {
     display: flex;
-    width: 600px;
+    width: 1300px;
     overflow: hidden;
     position:relative;
     margin: 20px auto;
@@ -284,4 +269,17 @@ body {
 
 .next {
     right: 10px;
+}
+
+
+@keyframes subir-carrossel{
+    0%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+.carousel-item:hover{
+    animation: subir-carrossel 0.5s;
 }
