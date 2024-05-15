@@ -110,21 +110,21 @@
 
         <div class="carousel">
 
-            <button class="button prev" onclick="moveSlide(-1)">❮</button>
+            <img class="button prev" onclick="moveSlide(-1)" src="../assets/seta-esquerda.png" alt="">
 
             <div class="carousel-container">
 
-                <div class="carousel-item"><img src="../assets/albuns/master-of-puppets.jpg"></div>
+                <div onclick="masterOfPuppets()" class="carousel-item"><img src="../assets/albuns/master-of-puppets.jpg"></div>
 
-                <div class="carousel-item"><img src="../assets/albuns/ride-the-lightning.jpg"></div>
+                <div onclick="rideTheLightning()" class="carousel-item"><img src="../assets/albuns/ride-the-lightning.jpg"></div>
 
-                <div class="carousel-item"><img src="../assets/albuns/kill-em-all.jpg"></div>
+                <div onclick="killEmAll()" class="carousel-item"><img src="../assets/albuns/kill-em-all.jpg"></div>
 
-                <div class="carousel-item"><img src="../assets/albuns/deathMagnetic.jpg"></div>
+                <div onclick="deathMagnetic()" class="carousel-item"><img src="../assets/albuns/deathMagnetic.jpg"></div>
+ 
+                <div onclick="andJusticeForAll()" class="carousel-item"><img src="../assets/albuns/andJusticeForAll.jpg"></div>
 
-                <div class="carousel-item"><img src="../assets/albuns/andJusticeForAll.jpg"></div>
-
-                <div class="carousel-item"> <img src="../assets/albuns/72seasons.jpg"></div>
+                <div onclick="seasons()" class="carousel-item"> <img src="../assets/albuns/72seasons.jpg"></div>
 
                 <div class="carousel-item"><img src="../assets/albuns/hardwire-to-self-destruct.jpg"></div>
 
@@ -134,17 +134,38 @@
 
                 <div class="carousel-item"><img src="../assets/albuns/lulu.jpg"></div>
 
+                <div class="carousel-item"><img src="../assets/albuns/garageinc.jpg"></div>
+
                 <div class="carousel-item"><img src="../assets/albuns/stAnger.jpg"></div>
 
                 <div class="carousel-item"><img src="../assets/albuns/metallicaalbum.jpg"></div>
             </div>
 
-            <button class="button next" onclick="moveSlide(1)">❯</button>
+            <img class="button next" onclick="moveSlide(1)" src="../assets/seta-direita.png" alt="">
 
         </div>
 
     </div>
 
+    <div id="divMusicas">
+        <div id="master1"></div>
+        <div id="master2"></div>
+
+        <div id="ride1"></div>
+        <div id="ride2"></div>
+
+        <div id="kill1"></div>
+        <div id="kill2"></div>
+
+        <div id="death1"></div>
+        <div id="death2"></div>
+
+        <div id="andJusticeForAll1"></div>
+        <div id="andJusticeForAll2"></div>
+
+        <div id="seasons1"></div>
+        <div id="seasons2"></div>
+    </div>
 
 <script>
     const container = document.querySelector('.carousel-container');
@@ -169,13 +190,304 @@
 
             container.style.transform = 'none';
         }
+
+    var master = 0;
+    function masterOfPuppets(){
+        death1.style.display = 'none';
+        death2.style.display = 'none';
+        death1.innerHTML = '';
+        death2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'none';
+        andJusticeForAll2.style.display = 'none';
+        andJusticeForAll1.innerHTML = '';
+        andJusticeForAll2.innerHTML = '';
+        
+        kill1.style.display = 'none';
+        kill2.style.display = 'none';
+        kill1.innerHTML = '';
+        kill2.innerHTML = '';
+
+        ride1.style.display = 'none';
+        ride2.style.display = 'none';
+        ride1.innerHTML = '';
+        ride2.innerHTML = '';
+
+        seasons1.style.display = 'none';
+        seasons2.style.display = 'none';
+        seasons1.innerHTML = '';
+        seasons2.innerHTML = '';
+
+        master1.style.display = 'block'
+        master2.style.display = 'block'
+        
+        // divMusicas.innerHTML = ``; 
+
+        // for(var cont = master; cont <= master; cont++){
+            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg"> <div class="nomeTempo"> <span> Battery</span><span> 5:12</span></div></div>`;
+
+            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo">  <span> The thing that should not be</span> <span> 6:36</span> </div></div>`;
+
+            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Disposable heroes</span> <span> 8:17</span></div></div>`;
+
+            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Orion</span> <span> 8:12</span></div></div>`;
+
+            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Master of puppets</span> <span> 8:35</span></div></div>`;
+            
+            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Welcome home (Sanitarium) </span> <span> 6:27</span></div></div>`;
+
+            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Leper Messiah</span> <span> 5:40</span></div></div>`;
+
+            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span>Damage, inc</span> <span> 5:08</span></div></div>`;
+        // }
+        
+    }
+
+    function rideTheLightning(){
+        ride1.style.display ='block';
+        ride2.style.display = 'block';
+        
+        kill1.style.display = 'none';
+        kill2.style.display = 'none';
+        kill1.innerHTML = '';
+        kill2.innerHTML = '';
+
+        master1.style.display = 'none';
+        master2.style.display = 'none';
+        master1.innerHTML = '';
+        master2.innerHTML = '';
+
+        death1.style.display = 'none';
+        death2.style.display = 'none';
+        death1.innerHTML = '';
+        death2.innerHTML = '';
+
+        seasons1.style.display = 'none';
+        seasons2.style.display = 'none';
+        seasons1.innerHTML = '';
+        seasons2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'none';
+        andJusticeForAll2.style.display = 'none';
+        andJusticeForAll1.innerHTML = '';
+        andJusticeForAll2.innerHTML = '';
+
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg"> <div class="nomeTempo"> <span> Fight fire with fire</span><span> 4:45 </span></div></div>`;
+
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo">  <span> Ride the lightning</span> <span> 6:37</span> </div></div>`;
+
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>For whom the bell tolls</span> <span> 5:10</span></div></div>`;
+
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Fade to black</span> <span> 6:58</span></div></div>`;
+
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Trapped under ice</span> <span> 4:05</span></div></div>`;
+
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Escape</span> <span> 4:24</span></div></div>`;
+
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Creeping death</span> <span> 6:36</span></div></div>`;
+
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>The call of Ktulu</span> <span> 8:54</span></div></div>`;
+
+    }
+
+    function killEmAll(){
+        ride1.style.display ='none';
+        ride2.style.display = 'none';
+        ride1.innerHTML = '';
+        ride2.innerHTML = '';
+
+        kill1.style.display = 'block';
+        kill2.style.display = 'block';
+
+        master1.style.display = 'none';
+        master2.style.display = 'none';
+        master1.innerHTML = '';
+        master2.innerHTML = '';
+
+        death1.style.display = 'none';
+        death2.style.display = 'none';
+        death1.innerHTML = '';
+        death2.innerHTML = '';
+
+        seasons1.style.display = 'none';
+        seasons2.style.display = 'none';
+        seasons1.innerHTML = '';
+        seasons2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'none';
+        andJusticeForAll2.style.display = 'none';
+        andJusticeForAll1.innerHTML = '';
+        andJusticeForAll2.innerHTML = '';
+
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg"> <div class="nomeTempo"> <span> Hit the lights</span><span> 4:17 </span></div></div>`;
+
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo">  <span> The four horseman </span> <span> 7:13</span> </div></div>`;
+
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Motorbreath</span> <span> 3:08</span></div></div>`;
+
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Jump in the fire</span> <span> 4:41 </span></div></div>`;
+
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Anethesia - pulling teeth</span> <span> 4:15</span></div></div>`;
+
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Whiplash</span> <span> 4:09</span></div></div>`;
+
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Phantom lord </span> <span> 5:02</span></div></div>`;
+
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>No remorse</span> <span> 6:27</span></div></div>`;
+
+    }
+
+    function deathMagnetic(){
+        ride1.style.display ='none';
+        ride2.style.display = 'none';
+        ride1.innerHTML = '';
+        ride2.innerHTML = '';
+
+        kill1.style.display = 'none';
+        kill2.style.display = 'none';
+        kill1.innerHTML = '';
+        kill2.innerHTML = '';
+
+        master1.style.display = 'none';
+        master2.style.display = 'none';
+        master1.innerHTML = '';
+        master2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'none';
+        andJusticeForAll2.style.display = 'none';
+        andJusticeForAll1.innerHTML = '';
+        andJusticeForAll2.innerHTML = '';
+
+        seasons1.style.display = 'none';
+        seasons2.style.display = 'none';
+        seasons1.innerHTML = '';
+        seasons2.innerHTML = '';
+
+        death1.style.display = 'block';
+        death2.style.display = 'block';
+        // divMusicas.innerHTML = ``;
+
+        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg"> <div class="nomeTempo"> <span> That was just your life </span><span> 7:08 </span></div></div>`;
+
+        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo">  <span> The end of the line</span> <span> 7:52</span> </div></div>`;
+
+        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Broken, beat & scarred</span> <span> 6:25</span></div></div>`;
+
+        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The day that never comes</span> <span> 7:56 </span></div></div>`;
+
+        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> All nightmare long</span> <span> 7:58</span></div></div>`;
+
+        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Cyanide</span> <span> 6:40</span></div></div>`;
+
+        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The unforgiving III</span> <span> 7:47</span></div></div>`;
+
+        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span>The Judas kiss</span> <span>8:01</span></div></div>`;
+    }
+
+    function andJusticeForAll(){
+        ride1.style.display ='none';
+        ride2.style.display = 'none';
+        ride1.innerHTML = '';
+        ride2.innerHTML = '';
+
+        kill1.style.display = 'none';
+        kill2.style.display = 'none';
+        kill1.innerHTML = '';
+        kill2.innerHTML = '';
+
+        master1.style.display = 'none';
+        master2.style.display = 'none';
+        master1.innerHTML = '';
+        master2.innerHTML = '';
+
+        death1.style.display = 'none';
+        death2.style.display = 'none';
+        death1.innerHTML = '';
+        death2.innerHTML = '';
+
+        seasons1.style.display = 'none';
+        seasons2.style.display = 'none';
+        seasons1.innerHTML = '';
+        seasons2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'block';
+        andJusticeForAll2.style.display = 'block';
+
+
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
+
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo">  <span> ...And justice for all</span> <span> 9:46</span> </div></div>`;
+
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Eye of the beholder</span> <span> 6:26</span></div></div>`;
+
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> One </span> <span> 7:26 </span></div></div>`;
+
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The shortest straw</span> <span> 6:35</span></div></div>`;
+
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Harvester of sorrow</span> <span> 5:45</span></div></div>`;
+
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The frayed ends of sanity</span> <span> 7:43</span></div></div>`;
+
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>To live is to die</span> <span>9:48</span></div></div>`;
+
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>Dyers eve</span> <span>5:13</span></div></div>`;
+    }
+
+    function seasons(){
+        ride1.style.display ='none';
+        ride2.style.display = 'none';
+        ride1.innerHTML = '';
+        ride2.innerHTML = '';
+
+        kill1.style.display = 'none';
+        kill2.style.display = 'none';
+        kill1.innerHTML = '';
+        kill2.innerHTML = '';
+
+        master1.style.display = 'none';
+        master2.style.display = 'none';
+        master1.innerHTML = '';
+        master2.innerHTML = '';
+
+        death1.style.display = 'none';
+        death2.style.display = 'none';
+        death1.innerHTML = '';
+        death2.innerHTML = '';
+
+        andJusticeForAll1.style.display = 'none';
+        andJusticeForAll2.style.display = 'none';
+        andJusticeForAll1.innerHTML = '';
+        andJusticeForAll2.innerHTML = '';
+
+        seasons1.style.display = 'block';
+        seasons2.style.display = 'block';
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg"> <div class="nomeTempo"> <span> 72 seasons </span><span> 7:39 </span></div></div>`;
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo">  <span> Shadow follows</span> <span> 6:12</span> </div></div>`;
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Screaming suicide</span> <span> 5:30</span></div></div>`;
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Sleepwalk my life away </span> <span> 6:56 </span></div></div>`;
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> You must burn </span> <span> 7:03 </span></div></div>`;
+
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Lux Æterna </span> <span> 3:26 </span></div></div>`;
+
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Crowd of barbed wire</span> <span> 5:49</span></div></div>`;
+
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Chasing light</span> <span> 6:45</span></div></div>`;
+
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>If darkness had a son</span> <span>6:36</span></div></div>`;
+
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Too far gone?</span> <span>4:34</span></div></div>`;
+
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Room of mirrors</span> <span>5:34</span></div></div>`;
+        
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Inamorata</span> <span>11:10</span></div></div>`;
+    }
+
 </script>
-
-</body>
-
-</html>
-
-
 <script>
     // função pra scrollar pra baixo quando clica na navbar
     $(document).ready(function () {
@@ -217,3 +529,10 @@
         });
     });
 </script>
+
+
+</body>
+
+</html>
+
+
