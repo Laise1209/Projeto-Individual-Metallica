@@ -319,6 +319,36 @@ body {
     margin-right: 100px;
 }
 
+#hardwire1{
+    display: flex;
+    margin-right: 100px;
+}
+
+#load1{
+    display: flex;
+    margin-right: 100px;
+}
+
+#reload1{
+    display: flex;
+    margin-left: 200px;
+}
+
+#lulu1{
+    display: flex;
+    margin-right: 100px;
+}
+
+#stAnger1{
+    display: flex;
+    margin-right: 100px;
+}
+
+#metallica1{
+    display: flex;
+    margin-right: 100px;
+}
+
 .musicas{
     background-color: #F4EEE0;
     display: flex;
