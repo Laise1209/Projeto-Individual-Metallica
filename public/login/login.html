@@ -37,7 +37,13 @@
         
         <span class="semConta">Ainda não possui conta? <a href="../cadastro/signin.html">Clique aqui!</a></span>
 
-        <button>Entrar</button>
+        <button onclick="entrar()">Entrar</button>
+        
+        <div id="div_aguardar" class="loading-div">
+            <img src="./assets/circle-loading.gif" id="loading-gif" />
+        </div>
+
+        <div id="div_erros_login"></div>
     </div>
 
 </div>
