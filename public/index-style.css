@@ -42,7 +42,7 @@ body {
 }
 
 .banner {
-    background-image: url(../assets/banner5.webp);
+    background-image: url(assets/banner5.webp);
     height: 680px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -166,7 +166,7 @@ body {
 
 .historia {
     display: flex;
-    background-image: url(../assets/historia-carrossel/imagem1-carrossel.jpg);
+    background-image: url(assets/historia-carrossel/imagem1-carrossel.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     flex-direction: column;

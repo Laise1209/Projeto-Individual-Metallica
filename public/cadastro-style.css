@@ -39,6 +39,10 @@ body{
     align-items: center;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .bloco .comConta{
     margin-top: 5px;
     margin-left: 18%;

@@ -36,6 +36,10 @@ body{
     color:#F4EEE0;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .bloco .semConta{
     margin-top: 5px;
     margin-left: 18%;

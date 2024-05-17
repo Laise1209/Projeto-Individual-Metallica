@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -19,7 +19,7 @@
     <div class="banner">
         <div class="cabecalho">
             <div class="container">
-                <img class="imagem" src="../assets/logo.png" alt="logo da banda e da página">
+                <img class="imagem" src="assets/logo.png" alt="logo da banda e da página">
                 <ul class="navbar">
                     <a href="#membros">
                         <li>Membros</li>
@@ -35,12 +35,12 @@
 
             <div class="cadastros">
                 <ul class="login">
-                    <a href="../login/login.html">
+                    <a href="login.html">
                         <li> Entrar </li>
                     </a>
                 </ul>
                 <ul class="signin">
-                    <a href="../cadastro/signin.html">
+                    <a href="cadastro.html">
                         <li> Cadastrar </li>
                     </a>
                 </ul>
@@ -56,22 +56,22 @@
     <div class="membros" id="membros">
         <div class="card">
             <a href="../artistas/james.html">
-                <img src="../assets/cards-artistas/james-card.jpeg" alt="">
+                <img src="assets/cards-artistas/james-card.jpeg" alt="">
             </a>
         </div>
         <div class="card">
             <a href="../artistas/kirk.html">
-                <img src="../assets/cards-artistas/kirk-card.jpeg" alt="">
+                <img src="assets/cards-artistas/kirk-card.jpeg" alt="">
             </a>
         </div>
         <div class="card">
             <a href="../artistas/robert.html">
-                <img src="../assets/cards-artistas/robert-card.jpeg" alt="">
+                <img src="assets/cards-artistas/robert-card.jpeg" alt="">
             </a>
         </div>
         <div class="card">
             <a href="../artistas/lars.html">
-                <img src="../assets/cards-artistas/lars-card.jpeg" alt="">
+                <img src="assets/cards-artistas/lars-card.jpeg" alt="">
             </a>
         </div>
     </div>
@@ -108,36 +108,36 @@
 
         <div class="carousel">
 
-            <img class="button prev" onclick="moveSlide(-1)" src="../assets/seta-esquerda.png" alt="">
+            <img class="button prev" onclick="moveSlide(-1)" src="assets/seta-esquerda.png" alt="">
 
             <div class="carousel-container">
 
-                <div onclick="masterOfPuppets()" class="carousel-item"><img src="../assets/albuns/master-of-puppets.jpg"></div>
+                <div onclick="masterOfPuppets()" class="carousel-item"><img src="assets/albuns/master-of-puppets.jpg"></div>
 
-                <div onclick="rideTheLightning()" class="carousel-item"><img src="../assets/albuns/ride-the-lightning.jpg"></div>
+                <div onclick="rideTheLightning()" class="carousel-item"><img src="assets/albuns/ride-the-lightning.jpg"></div>
 
-                <div onclick="killEmAll()" class="carousel-item"><img src="../assets/albuns/kill-em-all.jpg"></div>
+                <div onclick="killEmAll()" class="carousel-item"><img src="assets/albuns/kill-em-all.jpg"></div>
 
-                <div onclick="deathMagnetic()" class="carousel-item"><img src="../assets/albuns/deathMagnetic.jpg"></div>
+                <div onclick="deathMagnetic()" class="carousel-item"><img src="assets/albuns/deathMagnetic.jpg"></div>
  
-                <div onclick="andJusticeForAll()" class="carousel-item"><img src="../assets/albuns/andJusticeForAll.jpg"></div>
+                <div onclick="andJusticeForAll()" class="carousel-item"><img src="assets/albuns/andJusticeForAll.jpg"></div>
 
-                <div onclick="seasons()" class="carousel-item"> <img src="../assets/albuns/72seasons.jpg"></div>
+                <div onclick="seasons()" class="carousel-item"> <img src="assets/albuns/72seasons.jpg"></div>
 
-                <div onclick="hardwire()" class="carousel-item"><img src="../assets/albuns/hardwire-to-self-destruct.jpg"></div>
+                <div onclick="hardwire()" class="carousel-item"><img src="assets/albuns/hardwire-to-self-destruct.jpg"></div>
 
-                <div onclick="load()" class="carousel-item"><img src="../assets/albuns/load.jpg"></div>
+                <div onclick="load()" class="carousel-item"><img src="assets/albuns/load.jpg"></div>
 
-                <div onclick="reload()" class="carousel-item"><img src="../assets/albuns/reload.jpg"></div>
+                <div onclick="reload()" class="carousel-item"><img src="assets/albuns/reload.jpg"></div>
 
-                <div onclick="lulu()" class="carousel-item"><img src="../assets/albuns/lulu.jpg"></div>
+                <div onclick="lulu()" class="carousel-item"><img src="assets/albuns/lulu.jpg"></div>
 
-                <div onclick="stAnger()" class="carousel-item"><img src="../assets/albuns/stAnger.jpg"></div>
+                <div onclick="stAnger()" class="carousel-item"><img src="assets/albuns/stAnger.jpg"></div>
 
-                <div onclick="metallica()" class="carousel-item"><img src="../assets/albuns/metallicaalbum.jpg"></div>
+                <div onclick="metallica()" class="carousel-item"><img src="assets/albuns/metallicaalbum.jpg"></div>
             </div>
 
-            <img class="button next" onclick="moveSlide(1)" src="../assets/seta-direita.png" alt="">
+            <img class="button next" onclick="moveSlide(1)" src="assets/seta-direita.png" alt="">
 
         </div>
 
@@ -268,21 +268,21 @@
         // divMusicas.innerHTML = ``; 
 
         // for(var cont = master; cont <= master; cont++){
-            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg"> <div class="nomeTempo"> <span> Battery</span><span> 5:12</span></div></div>`;
+            master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg"> <div class="nomeTempo"> <span> Battery</span><span> 5:12</span></div></div>`;
 
-            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo">  <span> The thing that should not be</span> <span> 6:36</span> </div></div>`;
+            master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo">  <span> The thing that should not be</span> <span> 6:36</span> </div></div>`;
 
-            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Disposable heroes</span> <span> 8:17</span></div></div>`;
+            master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Disposable heroes</span> <span> 8:17</span></div></div>`;
 
-            master1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Orion</span> <span> 8:12</span></div></div>`;
+            master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Orion</span> <span> 8:12</span></div></div>`;
 
-            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Master of puppets</span> <span> 8:35</span></div></div>`;
+            master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Master of puppets</span> <span> 8:35</span></div></div>`;
             
-            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Welcome home (Sanitarium) </span> <span> 6:27</span></div></div>`;
+            master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Welcome home (Sanitarium) </span> <span> 6:27</span></div></div>`;
 
-            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Leper Messiah</span> <span> 5:40</span></div></div>`;
+            master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Leper Messiah</span> <span> 5:40</span></div></div>`;
 
-            master2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span>Damage, inc</span> <span> 5:08</span></div></div>`;
+            master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span>Damage, inc</span> <span> 5:08</span></div></div>`;
         // }
         
     }
@@ -346,21 +346,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg"> <div class="nomeTempo"> <span> Fight fire with fire</span><span> 4:45 </span></div></div>`;
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg"> <div class="nomeTempo"> <span> Fight fire with fire</span><span> 4:45 </span></div></div>`;
 
-        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo">  <span> Ride the lightning</span> <span> 6:37</span> </div></div>`;
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo">  <span> Ride the lightning</span> <span> 6:37</span> </div></div>`;
 
-        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>For whom the bell tolls</span> <span> 5:10</span></div></div>`;
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>For whom the bell tolls</span> <span> 5:10</span></div></div>`;
 
-        ride1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Fade to black</span> <span> 6:58</span></div></div>`;
+        ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Fade to black</span> <span> 6:58</span></div></div>`;
 
-        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Trapped under ice</span> <span> 4:05</span></div></div>`;
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Trapped under ice</span> <span> 4:05</span></div></div>`;
 
-        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Escape</span> <span> 4:24</span></div></div>`;
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Escape</span> <span> 4:24</span></div></div>`;
 
-        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Creeping death</span> <span> 6:36</span></div></div>`;
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span> Creeping death</span> <span> 6:36</span></div></div>`;
 
-        ride2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>The call of Ktulu</span> <span> 8:54</span></div></div>`;
+        ride2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo"> <span>The call of Ktulu</span> <span> 8:54</span></div></div>`;
 
     }
 
@@ -423,21 +423,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg"> <div class="nomeTempo"> <span> Hit the lights</span><span> 4:17 </span></div></div>`;
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg"> <div class="nomeTempo"> <span> Hit the lights</span><span> 4:17 </span></div></div>`;
 
-        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo">  <span> The four horseman </span> <span> 7:13</span> </div></div>`;
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo">  <span> The four horseman </span> <span> 7:13</span> </div></div>`;
 
-        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Motorbreath</span> <span> 3:08</span></div></div>`;
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Motorbreath</span> <span> 3:08</span></div></div>`;
 
-        kill1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Jump in the fire</span> <span> 4:41 </span></div></div>`;
+        kill1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Jump in the fire</span> <span> 4:41 </span></div></div>`;
 
-        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Anethesia - pulling teeth</span> <span> 4:15</span></div></div>`;
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Anethesia - pulling teeth</span> <span> 4:15</span></div></div>`;
 
-        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Whiplash</span> <span> 4:09</span></div></div>`;
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span> Whiplash</span> <span> 4:09</span></div></div>`;
 
-        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Phantom lord </span> <span> 5:02</span></div></div>`;
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>Phantom lord </span> <span> 5:02</span></div></div>`;
 
-        kill2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>No remorse</span> <span> 6:27</span></div></div>`;
+        kill2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg">  <div class="nomeTempo"> <span>No remorse</span> <span> 6:27</span></div></div>`;
 
     }
 
@@ -501,21 +501,21 @@
         death2.style.display = 'block';
         // divMusicas.innerHTML = ``;
 
-        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg"> <div class="nomeTempo"> <span> That was just your life </span><span> 7:08 </span></div></div>`;
+        death1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg"> <div class="nomeTempo"> <span> That was just your life </span><span> 7:08 </span></div></div>`;
 
-        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo">  <span> The end of the line</span> <span> 7:52</span> </div></div>`;
+        death1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo">  <span> The end of the line</span> <span> 7:52</span> </div></div>`;
 
-        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Broken, beat & scarred</span> <span> 6:25</span></div></div>`;
+        death1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Broken, beat & scarred</span> <span> 6:25</span></div></div>`;
 
-        death1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The day that never comes</span> <span> 7:56 </span></div></div>`;
+        death1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The day that never comes</span> <span> 7:56 </span></div></div>`;
 
-        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> All nightmare long</span> <span> 7:58</span></div></div>`;
+        death2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> All nightmare long</span> <span> 7:58</span></div></div>`;
 
-        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Cyanide</span> <span> 6:40</span></div></div>`;
+        death2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> Cyanide</span> <span> 6:40</span></div></div>`;
 
-        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The unforgiving III</span> <span> 7:47</span></div></div>`;
+        death2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span> The unforgiving III</span> <span> 7:47</span></div></div>`;
 
-        death2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span>The Judas kiss</span> <span>8:01</span></div></div>`;
+        death2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg">  <div class="nomeTempo"> <span>The Judas kiss</span> <span>8:01</span></div></div>`;
     }
 
     function andJusticeForAll(){
@@ -578,23 +578,23 @@
         andJusticeForAll2.style.display = 'block';
 
 
-        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
 
-        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo">  <span> ...And justice for all</span> <span> 9:46</span> </div></div>`;
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo">  <span> ...And justice for all</span> <span> 9:46</span> </div></div>`;
 
-        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Eye of the beholder</span> <span> 6:26</span></div></div>`;
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Eye of the beholder</span> <span> 6:26</span></div></div>`;
 
-        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> One </span> <span> 7:26 </span></div></div>`;
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> One </span> <span> 7:26 </span></div></div>`;
 
-        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The shortest straw</span> <span> 6:35</span></div></div>`;
+        andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The shortest straw</span> <span> 6:35</span></div></div>`;
 
-        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Harvester of sorrow</span> <span> 5:45</span></div></div>`;
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> Harvester of sorrow</span> <span> 5:45</span></div></div>`;
 
-        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The frayed ends of sanity</span> <span> 7:43</span></div></div>`;
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span> The frayed ends of sanity</span> <span> 7:43</span></div></div>`;
 
-        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>To live is to die</span> <span>9:48</span></div></div>`;
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>To live is to die</span> <span>9:48</span></div></div>`;
 
-        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>Dyers eve</span> <span>5:13</span></div></div>`;
+        andJusticeForAll2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg">  <div class="nomeTempo"> <span>Dyers eve</span> <span>5:13</span></div></div>`;
     }
 
     function seasons(){
@@ -656,29 +656,29 @@
         seasons1.style.display = 'block';
         seasons2.style.display = 'block';
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg"> <div class="nomeTempo"> <span> 72 seasons </span><span> 7:39 </span></div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg"> <div class="nomeTempo"> <span> 72 seasons </span><span> 7:39 </span></div></div>`;
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo">  <span> Shadow follows</span> <span> 6:12</span> </div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo">  <span> Shadow follows</span> <span> 6:12</span> </div></div>`;
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Screaming suicide</span> <span> 5:30</span></div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Screaming suicide</span> <span> 5:30</span></div></div>`;
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Sleepwalk my life away </span> <span> 6:56 </span></div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Sleepwalk my life away </span> <span> 6:56 </span></div></div>`;
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> You must burn </span> <span> 7:03 </span></div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> You must burn </span> <span> 7:03 </span></div></div>`;
 
-        seasons1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Lux Æterna </span> <span> 3:26 </span></div></div>`;
+        seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Lux Æterna </span> <span> 3:26 </span></div></div>`;
 
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Crowd of barbed wire</span> <span> 5:49</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Crowd of barbed wire</span> <span> 5:49</span></div></div>`;
 
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Chasing light</span> <span> 6:45</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Chasing light</span> <span> 6:45</span></div></div>`;
 
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>If darkness had a son</span> <span>6:36</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>If darkness had a son</span> <span>6:36</span></div></div>`;
 
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Too far gone?</span> <span>4:34</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span> Too far gone?</span> <span>4:34</span></div></div>`;
 
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Room of mirrors</span> <span>5:34</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Room of mirrors</span> <span>5:34</span></div></div>`;
         
-        seasons2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Inamorata</span> <span>11:10</span></div></div>`;
+        seasons2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg">  <div class="nomeTempo"> <span>Inamorata</span> <span>11:10</span></div></div>`;
     }
 
     function hardwire(){
@@ -741,23 +741,23 @@
         hardwire2.style.display = 'block';
 
 
-        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
+        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
 
-        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo">  <span> ...And justice for all</span> <span> 9:46</span> </div></div>`;
+        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo">  <span> ...And justice for all</span> <span> 9:46</span> </div></div>`;
 
-        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> Eye of the beholder</span> <span> 6:26</span></div></div>`;
+        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> Eye of the beholder</span> <span> 6:26</span></div></div>`;
 
-        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> One </span> <span> 7:26 </span></div></div>`;
+        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> One </span> <span> 7:26 </span></div></div>`;
 
-        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> The shortest straw</span> <span> 6:35</span></div></div>`;
+        hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> The shortest straw</span> <span> 6:35</span></div></div>`;
 
-        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> Harvester of sorrow</span> <span> 5:45</span></div></div>`;
+        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> Harvester of sorrow</span> <span> 5:45</span></div></div>`;
 
-        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> The frayed ends of sanity</span> <span> 7:43</span></div></div>`;
+        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span> The frayed ends of sanity</span> <span> 7:43</span></div></div>`;
 
-        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span>To live is to die</span> <span>9:48</span></div></div>`;
+        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span>To live is to die</span> <span>9:48</span></div></div>`;
 
-        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span>Dyers eve</span> <span>5:13</span></div></div>`;
+        hardwire2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg">  <div class="nomeTempo"> <span>Dyers eve</span> <span>5:13</span></div></div>`;
     }   
 
     function load(){
@@ -820,33 +820,33 @@
         load2.style.display = 'block';
 
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg"> <div class="nomeTempo"> <span> Ain't my bitch</span><span> 5:04 </span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg"> <div class="nomeTempo"> <span> Ain't my bitch</span><span> 5:04 </span></div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo">  <span> Until it sleeps</span> <span> 4:30</span> </div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo">  <span> Until it sleeps</span> <span> 4:30</span> </div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Bleeding me</span> <span> 8:18</span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Bleeding me</span> <span> 8:18</span></div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Wasting my hate </span> <span>3:57 </span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Wasting my hate </span> <span>3:57 </span></div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Ronnnie</span> <span> 5:17</span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Ronnnie</span> <span> 5:17</span></div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> 2 X 4</span> <span> 5:28</span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> 2 X 4</span> <span> 5:28</span></div></div>`;
 
-        load1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span>King nothing</span> <span> 5:28 </span></div></div>`;
+        load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span>King nothing</span> <span> 5:28 </span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Cure </span> <span> 4:54</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Cure </span> <span> 4:54</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Mama said</span> <span> 5:20</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> Mama said</span> <span> 5:20</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> The outlaw torn</span> <span>9:49</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> The outlaw torn</span> <span>9:49</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span> The house jack built</span> <span>6:39</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span> The house jack built</span> <span>6:39</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Hero of the day</span> <span>4:22</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Hero of the day</span> <span>4:22</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Poor twisted me</span> <span>4:00</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Poor twisted me</span> <span>4:00</span></div></div>`;
 
-        load2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Thorn within</span> <span>5:52</span></div></div>`;
+        load2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg">  <div class="nomeTempo"> <span>Thorn within</span> <span>5:52</span></div></div>`;
     }   
 
     function reload(){
@@ -909,13 +909,13 @@
         reload2.style.display = 'block';
 
 
-        reload1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/reload.jpg"> <div class="nomeTempo"> <span> Fuel </span><span> 4:30 </span></div></div>`;
+        reload1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/reload.jpg"> <div class="nomeTempo"> <span> Fuel </span><span> 4:30 </span></div></div>`;
 
-        reload1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/reload.jpg">  <div class="nomeTempo">  <span> The memory remains</span> <span> 4:39</span> </div></div>`;
+        reload1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/reload.jpg">  <div class="nomeTempo">  <span> The memory remains</span> <span> 4:39</span> </div></div>`;
 
-        reload1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/reload.jpg">  <div class="nomeTempo"> <span> Devil's dance</span> <span> 5:19</span></div></div>`;
+        reload1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/reload.jpg">  <div class="nomeTempo"> <span> Devil's dance</span> <span> 5:19</span></div></div>`;
 
-        reload1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/reload.jpg">  <div class="nomeTempo"> <span> The unforgiven II </span> <span> 7:02 </span></div></div>`;
+        reload1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/reload.jpg">  <div class="nomeTempo"> <span> The unforgiven II </span> <span> 7:02 </span></div></div>`;
     }
 
     function lulu(){
@@ -978,23 +978,23 @@
         lulu2.style.display = 'block';
 
 
-        lulu1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg"> <div class="nomeTempo"> <span> Brandenburg gate </span><span> 4:22 </span></div></div>`;
+        lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg"> <div class="nomeTempo"> <span> Brandenburg gate </span><span> 4:22 </span></div></div>`;
 
-        lulu1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo">  <span> The view</span> <span> 5:21</span> </div></div>`;
+        lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo">  <span> The view</span> <span> 5:21</span> </div></div>`;
 
-        lulu1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Mistress dread</span> <span> 6:53</span></div></div>`;
+        lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Mistress dread</span> <span> 6:53</span></div></div>`;
 
-        lulu1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Iced honey </span> <span> 4:38 </span></div></div>`;
+        lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Iced honey </span> <span> 4:38 </span></div></div>`;
 
-        lulu1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg"> <div class="nomeTempo"> <span> Cheat on me </span><span> 11:27 </span></div></div>`;
+        lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg"> <div class="nomeTempo"> <span> Cheat on me </span><span> 11:27 </span></div></div>`;
 
-        lulu2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo">  <span> The memory remains</span> <span> 4:39</span> </div></div>`;
+        lulu2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo">  <span> The memory remains</span> <span> 4:39</span> </div></div>`;
 
-        lulu2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Frustration</span> <span> 8:34</span></div></div>`;
+        lulu2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Frustration</span> <span> 8:34</span></div></div>`;
 
-        lulu2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Little dog </span> <span> 8:02 </span></div></div>`;
+        lulu2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Little dog </span> <span> 8:02 </span></div></div>`;
 
-        lulu2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Dragon </span> <span> 11:11 </span></div></div>`;
+        lulu2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg">  <div class="nomeTempo"> <span> Dragon </span> <span> 11:11 </span></div></div>`;
     }
 
     function stAnger(){
@@ -1056,27 +1056,27 @@
         stAnger1.style.display = 'block';
         stAnger2.style.display = 'block';
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> St. Anger </span><span> 7:22 </span></div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> St. Anger </span><span> 7:22 </span></div></div>`;
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo">  <span> Frantic</span> <span> 5:51</span> </div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo">  <span> Frantic</span> <span> 5:51</span> </div></div>`;
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Dirty window</span> <span> 5:25</span></div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Dirty window</span> <span> 5:25</span></div></div>`;
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Some kind of monster </span> <span> 8:26 </span></div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Some kind of monster </span> <span> 8:26 </span></div></div>`;
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> Invisible kid </span><span> 8:31 </span></div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> Invisible kid </span><span> 8:31 </span></div></div>`;
 
-        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> My world</span><span> 5:46 </span></div></div>`;
+        stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> My world</span><span> 5:46 </span></div></div>`;
 
-        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo">  <span> Shoot me again</span> <span> 7:11</span> </div></div>`;
+        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo">  <span> Shoot me again</span> <span> 7:11</span> </div></div>`;
 
-        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Sweet amber</span> <span> 5:28</span></div></div>`;
+        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Sweet amber</span> <span> 5:28</span></div></div>`;
 
-        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span>The unnamed feeling</span> <span> 7:08 </span></div></div>`;
+        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span>The unnamed feeling</span> <span> 7:08 </span></div></div>`;
 
-        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Purify </span> <span> 5:14 </span></div></div>`;
+        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> Purify </span> <span> 5:14 </span></div></div>`;
 
-        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> All within my hands</span> <span> 8:46 </span></div></div>`;
+        stAnger2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg">  <div class="nomeTempo"> <span> All within my hands</span> <span> 8:46 </span></div></div>`;
     }
 
     function metallica(){
@@ -1138,31 +1138,31 @@
         metallica1.style.display = 'block';
         metallica2.style.display = 'block';
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Enter sandman </span><span> 5:32 </span></div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Enter sandman </span><span> 5:32 </span></div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo">  <span> The unforgiven</span> <span> 6:26 </span> </div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo">  <span> The unforgiven</span> <span> 6:26 </span> </div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Through the never</span> <span> 4:04</span></div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Through the never</span> <span> 4:04</span></div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> The god tha failed</span> <span> 5:09 </span></div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> The god tha failed</span> <span> 5:09 </span></div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Invisible kid </span><span> 8:31 </span></div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Invisible kid </span><span> 8:31 </span></div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Sad but true</span><span> 5:09 </span></div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Sad but true</span><span> 5:09 </span></div></div>`;
 
-        metallica1.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo">  <span> Wherever I may roam</span> <span> 6:44</span> </div></div>`;
+        metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo">  <span> Wherever I may roam</span> <span> 6:44</span> </div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Nothing else matters</span> <span> 6:29</span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Nothing else matters</span> <span> 6:29</span></div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span>My friend of misery</span> <span> 6:50</span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span>My friend of misery</span> <span> 6:50</span></div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Holier than thou </span> <span> 3:48 </span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Holier than thou </span> <span> 3:48 </span></div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Don't tread on me</span> <span> 4:00 </span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Don't tread on me</span> <span> 4:00 </span></div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Of wolf and men</span> <span> 4:17 </span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> Of wolf and men</span> <span> 4:17 </span></div></div>`;
 
-        metallica2.innerHTML += `<br> <div class="musicas"> <img src="../assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> The struggle within</span> <span> 3:54 </span></div></div>`;
+        metallica2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg">  <div class="nomeTempo"> <span> The struggle within</span> <span> 3:54 </span></div></div>`;
     }
 
 </script>
