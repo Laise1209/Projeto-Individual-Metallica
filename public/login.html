@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 
-    <script src="./js/sessao.js"></script>
+    <script src="sessao.js"></script>
     <title>Login</title>
 </head>
+
 <body style="background-image:url(assets/login-imagem.jpg);">
-    
-   
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-    
 
-    <div class="fundo">
-    <div class="bloco">
-        <div class="dadosLogin">
-        <div class="seta-cabecalho">
-            <a href="index.html">
-                <img src="assets/seta.png" alt="">
-            </a>
-            <h2>Bem vindo de <span class="volta">volta!</span></h2>
-        </div>
-            <span>Insira seu email:</span>
-            <input type="password" id="input_email"> <br>
 
-            <span>Insira sua senha:</span>
-            <input type="password" id="input_senha">
+    <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+            <span id="mensagem_erro"></span>
         </div>
-        
-        <span class="semConta">Ainda não possui conta? <a href="cadastro.html">Clique aqui!</a></span>
-
-        <button onclick="entrar()">Entrar</button>
-        
-        <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif" />
-        </div>
-
-        <div id="div_erros_login"></div>
     </div>
 
-</div>
+
+    <div class="fundo">
+        <div class="bloco">
+            <div class="dadosLogin">
+                <div class="seta-cabecalho">
+                    <a href="index.html">
+                        <img src="assets/seta.png" alt="">
+                    </a>
+                    <h2>Bem vindo de <span class="volta">volta!</span></h2>
+                </div>
+                <span>Insira seu email:</span>
+                <input type="password" id="input_email"> <br>
+
+                <span>Insira sua senha:</span>
+                <input type="password" id="input_senha">
+            </div>
+
+            <span class="semConta">Ainda não possui conta? <a href="cadastro.html">Clique aqui!</a></span>
+
+
+            <button onclick="entrar()">Entrar</button>
+
+            <div id="div_aguardar" class="loading-div">
+                <img src="assets/carregando.png" id="loading-gif" />
+            </div>
+
+
+
+         
+            <div class="cardErro" id="cardErro">
+                <span id="mensagem_erro"></span>    
+            </div>
+            
+            <div id="mensagem_erro"></div>
+            <div id="div_erros_login"></div>
+        </div>
+
+    </div>
 </body>
+
 </html>
 
 <script>
@@ -63,7 +76,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha todos os campos!";
             finalizarAguardar();
             return false;
         }
@@ -96,7 +109,7 @@
                     sessionStorage.NOME_USUARIO = json.nome;
 
                     setTimeout(function () {
-                        window.location = "../logado/logado.html";
+                        window.location = "logado.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
