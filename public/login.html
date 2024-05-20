@@ -34,7 +34,7 @@
                     <h2>Bem vindo de <span class="volta">volta!</span></h2>
                 </div>
                 <span>Insira seu email:</span>
-                <input type="password" id="input_email"> <br>
+                <input type="text" id="input_email"> <br>
 
                 <span>Insira sua senha:</span>
                 <input type="password" id="input_senha">
@@ -76,6 +76,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             // cardErro.style.display = "block"
+            alert("Preencha todos os campos!")
             cardErro.innerHTML = "<span>Preencha todos os campos!</span>";
             finalizarAguardar();
             return false;
@@ -109,7 +110,7 @@
                     sessionStorage.NOME_USUARIO = json.nome;
 
                     setTimeout(function () {
-                        window.location = "logado.html";
+                        window.location = "./logado.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

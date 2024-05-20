@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Metallica</title>
 </head>
+<script>
+    var instrucaoSql = `
+        SELECT nome FROM usuario WHERE id = 1;
+    `;
+
+    return database.executar(instrucaoSql);
+</script>
 <body>
     <div class="banner">
         <div class="navbar">
@@ -25,10 +32,14 @@
                 <a href="#dashboard">
                     <span>Dashboard</span>
                 </a>
+
+                <a href="./jogo.html">
+                    <span>Jogo</span>
+                </a>
             </div>
         </div>
 
-        <span class="frase1">Olá ${usuário}</span>
+        <span id="spanUsuario" class="frase1">Olá <script>spanUsuario.innerHTML = `${instrucaoSql}`</script></span>
         <span class="frase2">Seja bem vindo a sua conta!</span>
     </div>
    
