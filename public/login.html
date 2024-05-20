@@ -53,7 +53,7 @@
 
          
             <div class="cardErro" id="cardErro">
-                <span id="mensagem_erro"></span>    
+                    
             </div>
             
             <div id="mensagem_erro"></div>
@@ -75,8 +75,8 @@
         var senhaVar = input_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "Preencha todos os campos!";
+            // cardErro.style.display = "block"
+            cardErro.innerHTML = "<span>Preencha todos os campos!</span>";
             finalizarAguardar();
             return false;
         }

@@ -93,7 +93,7 @@ button:hover{
 .card_erro {
     display: none;
     background-color: #fff;
-    color: black;
+    color: white;
     width: 230px;
     position: fixed;
     border-radius: 4px;

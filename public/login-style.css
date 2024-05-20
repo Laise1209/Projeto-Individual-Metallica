@@ -83,12 +83,10 @@ button:hover{
     margin-right: 15px;
 }
 
-.card_erro {
-    display: none;
+.cardErro {
     background-color: #F4EEE0;
     color: red;
     width: 230px;
-    position: fixed;
     padding: 10px;
     margin-right: 10%;
 }
