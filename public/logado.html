@@ -39,7 +39,14 @@
             </div>
         </div>
 
-        <span id="spanUsuario" class="frase1">Olá <script>spanUsuario.innerHTML = `${instrucaoSql}`</script></span>
+        <span id="spanUsuario" class="frase1">Olá <script>
+        var instrucaoSql = `
+            SELECT nome FROM usuario WHERE id = ${idUsuario};
+        `;
+
+        return database.executar(instrucaoSql);
+
+        spanUsuario.innerHTML = `${instrucaoSql}`</script></span>
         <span class="frase2">Seja bem vindo a sua conta!</span>
     </div>
    
@@ -48,21 +55,21 @@
 
         <div class="bandas-linha">
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/1Yox196W7bzVNZI7RBaPnf">
                     <img src="../assets/bandas/megadeth.jpeg" alt="Megadeth">
                 </a>
                 <p>Megadeth</p>
             </div>
 
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/0nmQIMXWTXfhgOBdNzhGOs">
                     <img src="../assets/bandas/avengedsevenfold.jpeg" alt="Avenged Sevenfold">
                 </a>
                 <p>Avenged Sevenfold</p>
             </div>
 
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/6mdiAmATAx73kdxrNrnlao">
                     <img src="../assets/bandas/ironmaiden.jpeg" alt="Iron Maiden">
                 </a>
                 <p>Iron Maiden</p>
@@ -71,21 +78,21 @@
 
         <div class="bandas-linha">
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/14pVkFUHDL207LzLHtSA18">
                     <img src="../assets/bandas/pantera.jpeg" alt="Pantera">
                 </a>
                 <p>Pantera</p>
             </div>
 
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/28hJdGN1Awf7u3ifk2lVkg">
                     <img src="../assets/bandas/testament.jpeg" alt="Testament">
                 </a>
                 <p>Testament</p>
             </div>
 
             <div class="card">
-                <a href="">
+                <a href="https://open.spotify.com/intl-pt/artist/3TOqt5oJwL9BE2NG9MEwDa">
                     <img src="../assets/bandas/disturbed.jpeg" alt="Disturbed">
                 </a>
                 <p>Disturbed</p>
@@ -94,7 +101,8 @@
     </div>
 
     <div class="quiz" id="quiz">
-        <h2>Teste seus conhecimentos sobre o METALLICA</h2>
+        <div class="card-quiz">
+            <h2>Teste seus conhecimentos sobre o METALLICA</h2>
             <div class="perguntas"></div>
             <span>Pergunta 1</span>
 
@@ -106,8 +114,11 @@
                 <input type='radio' id="alternativa3"> <span>Monster</span> <br>
                 <input type='radio' id="alternativa4"> <span>Ron McGovney Garage</span> <br>
             </div>
+
+            <button>Verificar</button>
         </div>
     </div>
+    
 </body>
 </html>
 <script> 

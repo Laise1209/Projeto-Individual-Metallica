@@ -4,10 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jogo.css">
-    <script src="./jogo.js"></script>
-    <title>Document</title>
+    <script src="jogo.html"></script>
+    <title>Metallica - jogo</title>
 </head>
 <body>
     
+    <div class="game-board">
+        <img src="assets/jogo/personagem-que-corre.gif" class="personagem">
+        <img src="assets/jogo/mao-jogo.png" class="mao">
+    </div>
+    
 </body>
 </html>
+<script>
+    
+
+    const personagem = document.querySelector('.personagem');
+    const mao = document.querySelector('.mao');
+
+    const pulo = () => {
+        personagem.classList.add('pulo');
+
+        setTimeout(() => {
+            personagem.classList.remove('pulo');
+        }, 550)
+    }
+
+    document.addEventListener('keydown', pulo)
+
+        
+
+    const loop = setInterval(() => {
+
+        const posicaoMao = mao.offsetLeft;
+        const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
+
+        if(posicaoMao <= 55 && posicaoMao > 0 && posicaoPersonagem < 81){
+            mao.style.animation = 'none';
+            mao.style.left = `${posicaoMao}px`; 
+
+            personagem.style.animation = 'none';
+            personagem.style.bottom = `${posicaoPersonagem}px`; 
+
+            personagem.src = 'assets/jogo/personagem-caido.png';
+            personagem.style.width = '60px';
+            personagem.style.marginLeft = '30px';
+            personagem.style.marginBottom = '0';
+
+            clearInterval(loop);
+        }
+       
+
+    }, 10)
+</script>
