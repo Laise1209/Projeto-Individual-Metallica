@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <title>Metallica</title>
 </head>
-<script>
-    var instrucaoSql = `
-        SELECT nome FROM usuario WHERE id = 1;
-    `;
-
-    return database.executar(instrucaoSql);
-</script>
 <body>
     <div class="banner">
+        <span id="menu-button">&#9776;</span>
+        <div id="menu">
+            <span onclick="sair()">Sair da conta</span>
+            <span>Ver minha conta</span>
+            <span>Opção 3</span>
+        </div>
         <div class="navbar">
             <div class="menu"></div>
             <div class="secoes">
@@ -39,14 +38,8 @@
             </div>
         </div>
 
-        <span id="spanUsuario" class="frase1">Olá <script>
-        var instrucaoSql = `
-            SELECT nome FROM usuario WHERE id = ${idUsuario};
-        `;
+        <div class="frase1">Olá...<span id="nome"> </span> </div>
 
-        return database.executar(instrucaoSql);
-
-        spanUsuario.innerHTML = `${instrucaoSql}`</script></span>
         <span class="frase2">Seja bem vindo a sua conta!</span>
     </div>
    
@@ -55,21 +48,21 @@
 
         <div class="bandas-linha">
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/1Yox196W7bzVNZI7RBaPnf">
+                <a href="https://open.spotify.com/intl-pt/artist/1Yox196W7bzVNZI7RBaPnf" target="_blank">
                     <img src="../assets/bandas/megadeth.jpeg" alt="Megadeth">
                 </a>
                 <p>Megadeth</p>
             </div>
 
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/0nmQIMXWTXfhgOBdNzhGOs">
+                <a href="https://open.spotify.com/intl-pt/artist/0nmQIMXWTXfhgOBdNzhGOs" target="_blank">
                     <img src="../assets/bandas/avengedsevenfold.jpeg" alt="Avenged Sevenfold">
                 </a>
                 <p>Avenged Sevenfold</p>
             </div>
 
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/6mdiAmATAx73kdxrNrnlao">
+                <a href="https://open.spotify.com/intl-pt/artist/6mdiAmATAx73kdxrNrnlao" target="_blank">
                     <img src="../assets/bandas/ironmaiden.jpeg" alt="Iron Maiden">
                 </a>
                 <p>Iron Maiden</p>
@@ -78,21 +71,21 @@
 
         <div class="bandas-linha">
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/14pVkFUHDL207LzLHtSA18">
+                <a href="https://open.spotify.com/intl-pt/artist/14pVkFUHDL207LzLHtSA18" target="_blank">
                     <img src="../assets/bandas/pantera.jpeg" alt="Pantera">
                 </a>
                 <p>Pantera</p>
             </div>
 
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/28hJdGN1Awf7u3ifk2lVkg">
-                    <img src="../assets/bandas/testament.jpeg" alt="Testament">
+                <a href="https://open.spotify.com/intl-pt/artist/28hJdGN1Awf7u3ifk2lVkg" target="_blank">
+                    <img src="../assets/bandas/testament.jpeg" alt="Testament">"
                 </a>
                 <p>Testament</p>
             </div>
 
             <div class="card">
-                <a href="https://open.spotify.com/intl-pt/artist/3TOqt5oJwL9BE2NG9MEwDa">
+                <a href="https://open.spotify.com/intl-pt/artist/3TOqt5oJwL9BE2NG9MEwDa" target="_blank">
                     <img src="../assets/bandas/disturbed.jpeg" alt="Disturbed">
                 </a>
                 <p>Disturbed</p>
@@ -118,10 +111,40 @@
             <button>Verificar</button>
         </div>
     </div>
+
+    <div class="rodape">
+        <span>Desenvolvido por Laise &copy;</span>
+        <span>Contate-me!</span>
+        <div class="redes">
+            <a href="https://github.com/Laise1209" target="_blank"><img src="assets/github.png"></a>
+        
+            <a href="https://www.linkedin.com/in/laise-martin-61b10b213/" target="_blank"><img src="assets/linkedin.png"></a>
+    
+            <a href="" target="_blank"><img src="assets/o-email.png" alt=""></a>
+        </div>
+       
+    </div>
     
 </body>
 </html>
 <script> 
+    nome.innerHTML = ` ${sessionStorage.NOME_USUARIO}`;
+
+    var menuButton = document.getElementById("menu-button");
+    var menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", function() {
+        if (menu.style.display == "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    });
+
+    function sair(){
+        window.location = "./login.html";
+        sessionStorage.clear();
+    }
 
     // função pra scrollar pra baixo quando clica na navbar
     $(document).ready(function(){

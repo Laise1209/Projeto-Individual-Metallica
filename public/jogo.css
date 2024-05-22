@@ -33,6 +33,28 @@
 }
 
 
+/* .dragao{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-top: 300px;
+    animation: mao-andando 3s infinite linear;
+} */
+
+.vida{
+    display: flex;
+    /* position: absolute; */
+    height: 40px;
+    width: 40px;
+    left: 0;
+    flex-direction: row;
+}
+
+.fim-de-jogo{
+    background-color: #6D5D6E ;
+    opacity: 0.8; 
+}
+
 @keyframes mao-andando{
     from{
         right: -80px;

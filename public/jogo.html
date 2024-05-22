@@ -10,6 +10,13 @@
 <body>
     
     <div class="game-board">
+        <img src="assets/jogo/coracao.png" class="vida" id="vida1">
+        <img src="assets/jogo/coracao.png" class="vida" id="vida2">
+        <img src="assets/jogo/coracao.png" class="vida" id="vida3">
+        <img src="assets/jogo/coracao.png" class="vida" id="vida4">
+        <img src="assets/jogo/coracao.png" class="vida" id="vida5">
+
+        <!-- <img src="assets/jogo/dragao.png" class=""> -->
         <img src="assets/jogo/personagem-que-corre.gif" class="personagem">
         <img src="assets/jogo/mao-jogo.png" class="mao">
     </div>
@@ -39,7 +46,8 @@
         const posicaoMao = mao.offsetLeft;
         const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
 
-        if(posicaoMao <= 55 && posicaoMao > 0 && posicaoPersonagem < 81){
+        for(var cont = 1; cont <= 5; cont++){
+            if(posicaoMao <= 55 && posicaoMao > 0 && posicaoPersonagem < 81){
             mao.style.animation = 'none';
             mao.style.left = `${posicaoMao}px`; 
 
@@ -51,8 +59,11 @@
             personagem.style.marginLeft = '30px';
             personagem.style.marginBottom = '0';
 
+            
             clearInterval(loop);
+            }
         }
+        
        
 
     }, 10)

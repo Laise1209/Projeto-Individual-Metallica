@@ -13,6 +13,41 @@ body{
     padding-top: 20px;
 }
 
+#menu {
+    display: none;
+    background-color: #F4EEE0;
+    opacity: 0.8;
+    border-radius: 10px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    margin-left:80px ;
+    margin-top: 20px;
+}
+
+#menu-button{
+    position: absolute;
+    font-size: 50px;
+    margin-left:20px ;
+}
+
+#menu-button:hover{
+    cursor: pointer;
+}
+
+#menu span{
+    display: flex;
+    color: #393646;
+    padding: 5px 5px 5px 5px;
+}
+
+#menu span:hover{
+    cursor: pointer;
+}
+
 .banner{
     background-image: url('../assets/imagem-fundo.jpg');
     background-attachment: fixed;
@@ -105,7 +140,8 @@ body{
 .card-quiz{
     background-color: #F4EEE0;
     opacity: 0.8;
-    margin-right: 800px;
+    margin-right: 20%;
+    margin-left: 20%;
     padding-left: 30px;
     height: 440px;
     padding-top: 20px;
@@ -133,4 +169,19 @@ body{
     cursor: pointer;
     background-color: #F4EEE0;
     color: #6D5D6E;
+}
+
+.rodape{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #F4EEE0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rodape img{
+    height: 40px;
+    width: 40px;
 }

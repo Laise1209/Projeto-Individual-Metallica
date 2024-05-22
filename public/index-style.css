@@ -366,3 +366,20 @@ body {
     font-size: 13px;
     margin-left: 5px;
 }
+
+
+.rodape{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: #F4EEE0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #352e3b;
+}
+
+.rodape img{
+    height: 40px;
+    width: 40px;
+}
