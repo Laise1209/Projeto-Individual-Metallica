@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="jogo.html"></script>
+    <title>Metallica - jogo</title>
+</head>
+<body>
+    <h1>Escolha o personagem que você irá jogar:</h1>
+    <div class="escolhaPersonagem">
+        <div class=nomePersonagem onclick="iniciarJames()">
+            <img src="../assets/jogo/james-parado.png" alt="">
+            <span>James Hetfield</span>
+        </div>
+        <div class=nomePersonagem onclick="iniciarKirk()">
+            <img src="../assets/jogo/kirk-parado.png" alt="">
+            <span>Kirk Hammet</span>
+        </div>
+        <div class=nomePersonagem onclick="iniciarLars()">
+            <img src="../assets/jogo/lars-parado.png" alt="">
+            <span>Lars Ulrich</span>
+        </div>
+        
+        <div class=nomePersonagem onclick="iniciarRobert()">
+            <img src="../assets/jogo/robert-parado.png" alt="">
+            <span>Robert Trujillo</span> 
+        </div>
+        
+    </div>
+
+   
+    
+</body>
+</html>
+<script>
+    function iniciarJames(){
+        window.location = "./personagem-james.html";
+    }
+
+    function iniciarKirk(){
+        window.location = "./personagem-kirk.html";
+    }
+
+    function iniciarLars(){
+        window.location = "./personagem-lars.html";
+    }
+
+    function iniciarRobert(){
+        window.location = "./personagem-robert.html";
+    }
+</script>

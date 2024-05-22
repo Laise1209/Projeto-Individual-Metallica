@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Jump&Scape</title>
+</head>
+<body>
+    <div class="game-board">
+        <img src="../assets/jogo/lars-personagem.gif" class="personagem">
+        <img src="../assets/jogo/monstro4.gif" class="monstro">
+    </div>
+
+</body>
+</html>
+<script>
+
+
+    const personagem = document.querySelector('.personagem');
+    const monstro = document.querySelector('.monstro');
+
+    const pulo = () => {
+        personagem.classList.add('pulo');
+
+        setTimeout(() => {
+            personagem.classList.remove('pulo');
+        }, 550)
+    }
+
+    document.addEventListener('keydown', pulo)
+
+
+
+    const loop = setInterval(() => {
+
+        const posicaoMonstro = monstro.offsetLeft;
+        const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
+
+        if(posicaoMonstro <= 55 && posicaoMonstro > 0 && posicaoPersonagem < 81){
+            monstro.style.animation = 'none';
+            monstro.style.left = `${posicaoMonstro}px`; 
+
+            personagem.style.animation = 'none';
+            personagem.style.bottom = `${posicaoPersonagem}px`; 
+
+            personagem.src = '../assets/jogo/personagem-caido.png';
+            personagem.style.width = '60px';
+            personagem.style.marginLeft = '30px';
+            personagem.style.marginBottom = '0';
+
+            clearInterval(loop);
+        }
+
+
+    }, 10)
+</script>

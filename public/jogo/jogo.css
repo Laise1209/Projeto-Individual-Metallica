@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    background-image: url(../assets/imagem-fundo.jpg);
+    background-size: cover;
+}
+
+.escolhaPersonagem{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 900px;
+    margin-left: 21%;
+    margin-top: 60px;
+   
+}
+
+.escolhaPersonagem .nomePersonagem:hover{
+    transform: scale(1.3);
+    transition: 1s;
+    background-color: #6D5D6E;
+    border-radius: 10px;
+    color: #F4EEE0;
+    cursor: pointer;
+}
+
+/* .nomePersonagem::backdrop{
+    transform: scale(1);
+    transition: 1s;
+    background-color:#F4EEE0 ;
+    border-radius: 10px;
+    color:  #6D5D6E;
+} */
+.nomePersonagem{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    height: 300px;
+    background-color: #F4EEE0;
+    border-radius: 10px;
+    transition: 1s;
+    /* width: 100px; */
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+.game-board{
+    width: 80%;
+    height: 600px;
+    border: 1px solid black;
+    margin-top: 80px;
+    margin-left: 150px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#000, #393646, #6D5D6E);
+}
+
+.mao{
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    animation: mao-andando 3s infinite linear;
+}
+
+.personagem{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.monstro{
+    position: absolute;
+    bottom: 0;
+    width: 170px;
+    animation: monstro-andando 3s infinite linear;
+}
+
+.monstro1{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: monstro-andando 3s infinite linear;
+}
+
+.pulo{
+    animation: pulo 700ms ease-out;
+}
+
+
+/* .dragao{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-top: 300px;
+    animation: mao-andando 3s infinite linear;
+} */
+
+.vida{
+    display: flex;
+    /* position: absolute; */
+    height: 40px;
+    width: 40px;
+    left: 0;
+    flex-direction: row;
+}
+
+.fim-de-jogo{
+    background-color: #6D5D6E ;
+    opacity: 0.8; 
+}
+
+@keyframes monstro-andando{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes monstro-andando{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}

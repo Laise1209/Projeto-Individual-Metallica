@@ -112,7 +112,7 @@
 
             <div class="carousel-container">
 
-                <div onclick="masterOfPuppets()" class="carousel-item"><img src="assets/albuns/master-of-puppets.jpg"></div>
+                <div id="master" onclick="masterOfPuppets()" class="carousel-item"><img src="assets/albuns/master-of-puppets.jpg"></div>
 
                 <div onclick="rideTheLightning()" class="carousel-item"><img src="assets/albuns/ride-the-lightning.jpg"></div>
 
@@ -182,8 +182,16 @@
     </div>
 
     <div class="eu">
-        <img src="" alt="">
-        <p></p>
+        <img src="assets/minha-foto.jpg">
+
+        <div class="minha-info">
+            <h2>Sobre mim!</h2>
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident iure fugiat veritatis molestiae enim, error minima, explicabo, ipsam incidunt impedit maxime! Voluptatem cupiditate dolores quidem aliquam tempore repellat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, deleniti. Rerum at quam consectetur tempora debitis placeat consequuntur, aliquid quas voluptas fuga est, dolor ad aliquam voluptatibus, vero similique nam.</p>
+
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident iure fugiat veritatis molestiae enim, error minima, explicabo, ipsam incidunt impedit maxime! Voluptatem cupiditate dolores quidem aliquam tempore repellat aperiam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, deleniti. Rerum at quam consectetur tempora debitis placeat consequuntur, aliquid quas voluptas fuga est, dolor ad aliquam voluptatibus, vero similique nam.</p>
+        </div>
+        
     </div>
 
     <div class="rodape">
@@ -222,7 +230,7 @@
             container.style.transform = 'none';
         }
 
-    var master = 0;
+   
     function masterOfPuppets(){
         death1.style.display = 'none';
         death2.style.display = 'none';
@@ -281,6 +289,20 @@
 
         master1.style.display = 'block'
         master2.style.display = 'block'
+
+        // master = document.getElementById('#master')
+    //     master.addEventListener("click", function() {
+    //     if (master1.style.display == 'block' && master2.style.display == 'block') {
+
+    //         master1.style.display = 'none'
+    //         master2.style.display = 'none'
+    //         master1.innerHTML = '';
+    //         master2.innerHTML = '';
+    //     } else {
+    //         master1.style.display = 'block'
+    //         master2.style.display = 'block'
+    //     }
+    // });
         
         // divMusicas.innerHTML = ``; 
 
