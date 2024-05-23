@@ -110,10 +110,11 @@
     <div class="albuns" id="albuns">
         <h3>Álbuns</h3>
 
-        <div class="carousel">
-
+        
+        <div class="botao">
             <img class="button prev" onclick="moveSlide(-1)" src="assets/seta-esquerda.png" alt="">
 
+            <div class="carousel">
             <div class="carousel-container">
 
                 <div id="master" onclick="masterOfPuppets()" class="carousel-item"><img src="assets/albuns/master-of-puppets.jpg"></div>
@@ -140,10 +141,10 @@
 
                 <div onclick="metallica()" class="carousel-item"><img src="assets/albuns/metallicaalbum.jpg"></div>
             </div>
-
-            <img class="button next" onclick="moveSlide(1)" src="assets/seta-direita.png" alt="">
-
         </div>
+            <img class="button next" onclick="moveSlide(1)" src="assets/seta-direita.png" alt="">
+        </div>
+        
 
     </div>
 
@@ -293,26 +294,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        master1.style.display = 'block'
-        master2.style.display = 'block'
+        if (master1.style.display == "block") {
+            master1.style.display = "none";
+        } else {
+            master1.style.display = "block";
+            master1.innerHTML = '';
+            
+        }
 
-        // master = document.getElementById('#master')
-    //     master.addEventListener("click", function() {
-    //     if (master1.style.display == 'block' && master2.style.display == 'block') {
+        if (master2.style.display == "block") {
+            master2.style.display = "none";
+        } else {
+            master2.style.display = "block";
+            master2.innerHTML = '';
+        }
 
-    //         master1.style.display = 'none'
-    //         master2.style.display = 'none'
-    //         master1.innerHTML = '';
-    //         master2.innerHTML = '';
-    //     } else {
-    //         master1.style.display = 'block'
-    //         master2.style.display = 'block'
-    //     }
-    // });
-        
-        // divMusicas.innerHTML = ``; 
-
-        // for(var cont = master; cont <= master; cont++){
             master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg"> <div class="nomeTempo"> <span> Battery</span><span> 5:12</span></div></div>`;
 
             master1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo">  <span> The thing that should not be</span> <span> 6:36</span> </div></div>`;
@@ -328,13 +324,13 @@
             master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span> Leper Messiah</span> <span> 5:40</span></div></div>`;
 
             master2.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/master-of-puppets.jpg">  <div class="nomeTempo"> <span>Damage, inc</span> <span> 5:08</span></div></div>`;
-        // }
+        
         
     }
 
     function rideTheLightning(){
-        ride1.style.display ='block';
-        ride2.style.display = 'block';
+        // ride1.style.display ='block';
+        // ride2.style.display = 'block';
         
         kill1.style.display = 'none';
         kill2.style.display = 'none';
@@ -391,6 +387,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
+        if (ride1.style.display == "block") {
+            ride1.style.display = "none";
+        } else {
+            ride1.style.display = "block";
+            ride1.innerHTML = '';
+            
+        }
+
+        if (ride2.style.display == "block") {
+            ride2.style.display = "none";
+        } else {
+            ride2.style.display = "block";
+            ride2.innerHTML = '';
+        }
+
         ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg"> <div class="nomeTempo"> <span> Fight fire with fire</span><span> 4:45 </span></div></div>`;
 
         ride1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/ride-the-lightning.jpg">  <div class="nomeTempo">  <span> Ride the lightning</span> <span> 6:37</span> </div></div>`;
@@ -414,9 +425,6 @@
         ride2.style.display = 'none';
         ride1.innerHTML = '';
         ride2.innerHTML = '';
-
-        kill1.style.display = 'block';
-        kill2.style.display = 'block';
 
         master1.style.display = 'none';
         master2.style.display = 'none';
@@ -467,6 +475,21 @@
         metallica2.style.display = 'none';
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
+
+        if (kill1.style.display == "block") {
+            kill1.style.display = "none";
+        } else {
+            kill1.style.display = "block";
+            kill1.innerHTML = '';
+            
+        }
+
+        if (kill2.style.display == "block") {
+            kill2.style.display = "none";
+        } else {
+            kill2.style.display = "block";
+            kill2.innerHTML = '';
+        }
 
         kill1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/kill-em-all.jpg"> <div class="nomeTempo"> <span> Hit the lights</span><span> 4:17 </span></div></div>`;
 
@@ -542,9 +565,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        death1.style.display = 'block';
-        death2.style.display = 'block';
-        // divMusicas.innerHTML = ``;
+        if (death1.style.display == "block") {
+            death1.style.display = "none";
+        } else {
+            death1.style.display = "block";
+            death1.innerHTML = '';
+            
+        }
+
+        if (death2.style.display == "block") {
+            death2.style.display = "none";
+        } else {
+            death2.style.display = "block";
+            death2.innerHTML = '';
+        }
+
 
         death1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/deathMagnetic.jpg"> <div class="nomeTempo"> <span> That was just your life </span><span> 7:08 </span></div></div>`;
 
@@ -619,8 +654,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        andJusticeForAll1.style.display = 'block';
-        andJusticeForAll2.style.display = 'block';
+        if (andJusticeForAll1.style.display == "block") {
+            andJusticeForAll1.style.display = "none";
+        } else {
+            andJusticeForAll1.style.display = "block";
+            andJusticeForAll1.innerHTML = '';
+            
+        }
+
+        if (andJusticeForAll2.style.display == "block") {
+            andJusticeForAll2.style.display = "none";
+        } else {
+            andJusticeForAll2.style.display = "block";
+            andJusticeForAll2.innerHTML = '';
+        }
+
 
 
         andJusticeForAll1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/andJusticeForAll.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
@@ -698,8 +746,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        seasons1.style.display = 'block';
-        seasons2.style.display = 'block';
+        if (seasons1.style.display == "block") {
+            seasons1.style.display = "none";
+        } else {
+            seasons1.style.display = "block";
+            seasons1.innerHTML = '';
+            
+        }
+
+        if (seasons2.style.display == "block") {
+            seasons2.style.display = "none";
+        } else {
+            seasons2.style.display = "block";
+            seasons2.innerHTML = '';
+        }
+
 
         seasons1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/72seasons.jpg"> <div class="nomeTempo"> <span> 72 seasons </span><span> 7:39 </span></div></div>`;
 
@@ -782,8 +843,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        hardwire1.style.display = 'block';
-        hardwire2.style.display = 'block';
+        if (hardwire1.style.display == "block") {
+            hardwire1.style.display = "none";
+        } else {
+            hardwire1.style.display = "block";
+            hardwire1.innerHTML = '';
+            
+        }
+
+        if (hardwire2.style.display == "block") {
+            hardwire2.style.display = "none";
+        } else {
+            hardwire2.style.display = "block";
+            hardwire2.innerHTML = '';
+        }
+
 
 
         hardwire1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/hardwire-to-self-destruct.jpg"> <div class="nomeTempo"> <span> Blackened </span><span> 6:42 </span></div></div>`;
@@ -861,8 +935,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        load1.style.display = 'block';
-        load2.style.display = 'block';
+        if (load1.style.display == "block") {
+            load1.style.display = "none";
+        } else {
+            load1.style.display = "block";
+            load1.innerHTML = '';
+            
+        }
+
+        if (load2.style.display == "block") {
+            load2.style.display = "none";
+        } else {
+            load2.style.display = "block";
+            load2.innerHTML = '';
+        }
+
 
 
         load1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/load.jpg"> <div class="nomeTempo"> <span> Ain't my bitch</span><span> 5:04 </span></div></div>`;
@@ -950,8 +1037,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        reload1.style.display = 'block';
-        reload2.style.display = 'block';
+        if (reload1.style.display == "block") {
+            reload1.style.display = "none";
+        } else {
+            reload1.style.display = "block";
+            reload1.innerHTML = '';
+            
+        }
+
+        if (reload2.style.display == "block") {
+            reload2.style.display = "none";
+        } else {
+            reload2.style.display = "block";
+            reload2.innerHTML = '';
+        }
+
 
 
         reload1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/reload.jpg"> <div class="nomeTempo"> <span> Fuel </span><span> 4:30 </span></div></div>`;
@@ -1019,8 +1119,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        lulu1.style.display = 'block';
-        lulu2.style.display = 'block';
+        if (lulu1.style.display == "block") {
+            lulu1.style.display = "none";
+        } else {
+            lulu1.style.display = "block";
+            lulu1.innerHTML = '';
+            
+        }
+
+        if (lulu2.style.display == "block") {
+            lulu2.style.display = "none";
+        } else {
+            lulu2.style.display = "block";
+            lulu2.innerHTML = '';
+        }
+
 
 
         lulu1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/lulu.jpg"> <div class="nomeTempo"> <span> Brandenburg gate </span><span> 4:22 </span></div></div>`;
@@ -1098,8 +1211,21 @@
         metallica1.innerHTML = '';
         metallica2.innerHTML = '';
 
-        stAnger1.style.display = 'block';
-        stAnger2.style.display = 'block';
+        if (stAnger1.style.display == "block") {
+            stAnger1.style.display = "none";
+        } else {
+            stAnger1.style.display = "block";
+            stAnger1.innerHTML = '';
+            
+        }
+
+        if (stAnger2.style.display == "block") {
+            stAnger2.style.display = "none";
+        } else {
+            stAnger2.style.display = "block";
+            stAnger2.innerHTML = '';
+        }
+
 
         stAnger1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/stAnger.jpg"> <div class="nomeTempo"> <span> St. Anger </span><span> 7:22 </span></div></div>`;
 
@@ -1180,8 +1306,21 @@
         stAnger1.innerHTML = '';
         stAnger2.innerHTML = '';
 
-        metallica1.style.display = 'block';
-        metallica2.style.display = 'block';
+        if (metallica1.style.display == "block") {
+            metallica1.style.display = "none";
+        } else {
+            metallica1.style.display = "block";
+            metallica1.innerHTML = '';
+            
+        }
+
+        if (metallica2.style.display == "block") {
+            metallica2.style.display = "none";
+        } else {
+            metallica2.style.display = "block";
+            metallica2.innerHTML = '';
+        }
+
 
         metallica1.innerHTML += `<br> <div class="musicas"> <img src="assets/albuns/metallicaalbum.jpg"> <div class="nomeTempo"> <span> Enter sandman </span><span> 5:32 </span></div></div>`;
 

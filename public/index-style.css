@@ -233,6 +233,14 @@ body {
     margin: 20px auto;
 
 }
+.botao{
+    display: flex;
+    width: 1400px;
+    overflow: hidden;
+    position:relative;
+    margin: 20px auto;
+
+}
 
 .carousel-container {
     display: flex;
@@ -240,6 +248,11 @@ body {
 
 }
 
+/* .carorusel-wraper{
+    position: relative;
+    width: 1400px;
+    margin: 10px auto;
+} */
 .carousel-item {
     flex: 0 0 100px;
     height: 300px;
@@ -267,11 +280,11 @@ body {
 }
 
 .prev {
-    left: 10px;
+    left: 20px;
 }
 
 .next {
-    right: 10px;
+    right: 15px;
 }
 
 .carousel-item:hover{

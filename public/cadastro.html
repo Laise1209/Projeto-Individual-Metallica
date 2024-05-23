@@ -40,15 +40,12 @@
             <div id="div_aguardar" class="loading-div">
               <img src="assets/carregando.png" id="loading-gif" />
             </div>
+            
+              <span id="mensagem_erro"></span>   
     
+          <div id="div_erros_login"></div>
             
         </div>
-
-        <div class="cardErro" id="cardErro">
-          <span id="mensagem_erro"></span>    
-      </div>
-
-      <div id="div_erros_login"></div>
 </body>
 </html>
 <script>
@@ -61,18 +58,28 @@
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_senhaConfirm.value;
+    var indiceArroba = emailVar.indexOf('@');
+    var indicePontoCom = emailVar.indexOf('.com');
 
     if(senhaVar != confirmacaoSenhaVar){
       alert('As senhas não correspondem!');
       finalizarAguardar();
       return false;
-    }
-    
-    if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+    } else if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
       // cardErro.style.display = "block";
       // mensagem_erro.innerHTML = "Preencha todos os campos!";
       alert('Preencha todos os campos!')
 
+      finalizarAguardar();
+      return false;
+
+    } else if(indiceArroba == -1 || indicePontoCom == -1){
+      alert('Email inválido!');
+      finalizarAguardar();
+      return false;
+
+    } else if(senhaVar <= 6){
+      alert('Senha inválida, deve possuir 6 ou mais caracteres!')
       finalizarAguardar();
       return false;
     } else {
@@ -97,7 +104,7 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
+          // cardErro.style.display = "block";
 
           mensagem_erro.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
@@ -109,7 +116,7 @@
           limparFormulario();
           finalizarAguardar();
         } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
+          mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {

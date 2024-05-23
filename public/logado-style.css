@@ -19,7 +19,7 @@ body{
     opacity: 0.8;
     border-radius: 10px;
     position: absolute;
-    height: 150px;
+    height: 100px;
     width: 150px;
     flex-direction: column;
     justify-content: center;
