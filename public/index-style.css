@@ -13,7 +13,7 @@ body {
 }
 
 .banner .navbar {
-    width: 500px;
+    width: 700px;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -130,6 +130,7 @@ body {
     width: 300px;
     border-radius: 10px;
     filter: grayscale(100%);
+    transition: 1s;
 }
 
 .membros .card img:hover {
@@ -379,7 +380,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 650px;
-    color: #F4EEE0;
+    color: #4F4557;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -392,10 +393,19 @@ body {
 }
 
 .minha-info{
+    display: flex;
+    background-color: #F4EEE0;
+    width: 700px;
+    height: 400px;
+    flex-direction: column;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.minha-info p{
     width: 650px;
     text-align: justify;
-    background-color: #F4EEE0;
-
 }
 
 .rodape{

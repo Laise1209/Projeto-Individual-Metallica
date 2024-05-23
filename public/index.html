@@ -30,6 +30,10 @@
                     <a href="#albuns">
                         <li>Álbuns</li>
                     </a>
+
+                    <a href="#sobreMim">
+                        <li>Desenvolvedora</li>
+                    </a>
                 </ul>
             </div>
 
@@ -144,6 +148,7 @@
     </div>
 
     <div id="divMusicas">
+
         <div id="master1"></div>
         <div id="master2"></div>
 
@@ -181,7 +186,7 @@
         <div id="metallica2" ></div>
     </div>
 
-    <div class="eu">
+    <div class="eu" id="sobreMim">
         <img src="assets/minha-foto.jpg">
 
         <div class="minha-info">
@@ -219,10 +224,11 @@
 
             if (direction === 1) {
                 container.appendChild(container.firstElementChild);
+                
             } else {
                 container.insertBefore(container.lastElementChild,
                 container.firstElementChild);
-
+                
             }
 
             container.style.transition = 'none';

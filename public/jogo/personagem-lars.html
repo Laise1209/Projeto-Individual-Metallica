@@ -12,6 +12,10 @@
         <img src="../assets/jogo/monstro4.gif" class="monstro">
     </div>
 
+    <div class="gameOver">
+
+    </div>
+
 </body>
 </html>
 <script>
@@ -37,7 +41,7 @@
         const posicaoMonstro = monstro.offsetLeft;
         const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
 
-        if(posicaoMonstro <= 55 && posicaoMonstro > 0 && posicaoPersonagem < 81){
+        if(posicaoMonstro <= 55 && posicaoMonstro > 0 && posicaoPersonagem < 90){
             monstro.style.animation = 'none';
             monstro.style.left = `${posicaoMonstro}px`; 
 
@@ -48,6 +52,8 @@
             personagem.style.width = '60px';
             personagem.style.marginLeft = '30px';
             personagem.style.marginBottom = '0';
+
+            gameOver.style.display = 'flex';
 
             clearInterval(loop);
         }

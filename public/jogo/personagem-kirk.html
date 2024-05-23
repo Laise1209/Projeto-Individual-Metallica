@@ -37,7 +37,7 @@
         const posicaomonstro = monstro.offsetLeft;
         const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
 
-        if(posicaomonstro <= 55 && posicaomonstro > 0 && posicaoPersonagem < 81){
+        if(posicaomonstro <= 50 && posicaomonstro > 0 && posicaoPersonagem <= 45){
             monstro.style.animation = 'none';
             monstro.style.left = `${posicaomonstro}px`; 
 
