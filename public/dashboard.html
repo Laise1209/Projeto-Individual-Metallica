@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body onload="exibirGrafico()">
+    <div id="grafico"></div>
+    
+</body>
+</html>
+<script>
+
+    function exibirGrafico() {
+        document.getElementById("grafico").innerHTML += 
+            `<div id="graficoQuiz">
+                <div class="graph">
+                    <canvas id="myChartCanvas"></canvas>
+                </div>
+            </div>`
+        ;
+        obterDadosGrafico();
+    }
+
+    function obterDadosGrafico() {
+        fetch(`/medidas/ultimas/`, { cache: 'no-store' })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        resposta.reverse();
+                        plotarGrafico(resposta);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGrafico(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+
+        let labels = [];
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Acertos',
+                data: [],
+                fill: false,
+                borderColor: '#97BE5A',
+                backgroundColor: '#97BE5A',
+                tension: 0.1
+            },
+            {
+                label: 'Erros',
+                data: [],
+                fill: false,
+                borderColor: '#FF0000',
+                backgroundColor: '#FF0000',
+                tension: 0.1
+            }]
+        };
+
+        console.log('Dados recebidos para plotar o gráfico:', resposta);
+
+        for (let i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.nome);
+            dados.datasets[0].data.push(registro.pontuacao);
+            // dados.datasets[1].data.push(registro.erros);
+        }
+
+        console.log('Labels:', labels);
+        console.log('Dados do Dataset:', dados.datasets);
+
+        const config = {
+            type: 'bar',
+            data: dados,
+        };
+
+        let ctx = document.getElementById('myChartCanvas').getContext('2d');
+        let myChart = new Chart(ctx, config);
+            }
+</script>
