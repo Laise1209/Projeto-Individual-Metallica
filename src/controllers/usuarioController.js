@@ -24,7 +24,7 @@ function autenticar(req, res) {
                             // .then((resultadoAquarios) => {
                             //     if (resultadoAquarios.length > 0) {
                                     res.json({
-                                        // id: resultadoAutenticar[0].id,
+                                        idUsuario: resultadoAutenticar[0].idUsuario,
                                         email: resultadoAutenticar[0].email,
                                         nome: resultadoAutenticar[0].nome,
                                         senha: resultadoAutenticar[0].senha,
@@ -57,7 +57,8 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
-    // var usuarioId = req.body.nomeServer;
+    var idUsuario = req.body.idServer;
+    // var usuarioId = req.body.idServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {

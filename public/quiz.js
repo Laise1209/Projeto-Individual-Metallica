@@ -5,6 +5,7 @@ const textFinish = document.querySelector('.finish span');
 const content = document.querySelector('.content');
 const contentFinish = document.querySelector('.finish');
 const btnRestart = document.querySelector('.finish button');
+// var ID_USUARIO = sessionStorage.getItem("ID_USUARIO");
 
 import questions from "./questions.js";
 
@@ -37,6 +38,16 @@ function finish(){
     textFinish.innerHTML = `Você acertou ${questionsCorrect} de ${questions.length}`;
     content.style.display = 'none';
     contentFinish.style.display = 'flex';
+    fetch(`/resultado/registrar`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            scoreServer: questionsCorrect, 
+            // quizServer: idRespostasQuiz
+        }),
+    })
 }
 
 function loadQuestion(){

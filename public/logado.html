@@ -194,30 +194,9 @@
     var nomeVar =input_nome.value;
     var emailVar = input_email.value;
 
-    // if(senhaVar != confirmacaoSenhaVar){
-    //   alert('As senhas não correspondem!');
-    //   finalizarAguardar();
-    //   return false;
-    // } else if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-    //   // cardErro.style.display = "block";
-    //   // mensagem_erro.innerHTML = "Preencha todos os campos!";
-    //   alert('Preencha todos os campos!')
-
-    //   finalizarAguardar();
-    //   return false;
-
-    // } else if(indiceArroba == -1 || indicePontoCom == -1){
-    //   alert('Email inválido!');
-    //   finalizarAguardar();
-    //   return false;
-
-    // } else if(senhaVar <= 6){
-    //   alert('Senha inválida, deve possuir 6 ou mais caracteres!')
-    //   finalizarAguardar();
-    //   return false;
-    // } else {
       setInterval(sumirMensagem, 5000);
-    // }
+        
+      
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
