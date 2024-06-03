@@ -38,7 +38,7 @@ function finish(){
     textFinish.innerHTML = `Você acertou ${questionsCorrect} de ${questions.length}`;
     content.style.display = 'none';
     contentFinish.style.display = 'flex';
-    fetch(`/resultado/registrar`, {
+    fetch(`/resultado/registrar/${sessionStorage.getItem.ID_USUARIO}`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
@@ -48,6 +48,11 @@ function finish(){
             // quizServer: idRespostasQuiz
         }),
     })
+    // .then(response => response.json())
+    // .then(data => console.log('Success:', data))
+    // .catch((error) => {
+    //     console.error('Error:', error);
+    // });
 }
 
 function loadQuestion(){

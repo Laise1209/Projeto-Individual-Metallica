@@ -5,7 +5,7 @@ function registrarDados(req, res){
     var fkUsuario = req.body.fkUsuario
     // var idRespostasQuiz = req.body.quizServer
 
-    console.log(`Pontos aqui` + pontos)
+    // console.log(`Pontos aqui` + pontos)
     resultadoModel.registrarDados(fkUsuario, qtdRespostasCorretas)
     .then(
         function (resultado) {

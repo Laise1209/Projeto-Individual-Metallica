@@ -98,7 +98,7 @@
                 <!-- <h2>Teste seus conhecimentos sobre o METALLICA</h2> -->
                 <span class="spnQtd"></span>
                 <span class="question"></span>
-                <span onclick="cadastrar()" class="answers"></span>
+                <span class="answers"></span>
             </div>
             <div class="finish">
                 <span></span>
@@ -123,7 +123,7 @@
 </body>
 </html>
 <script src="./quiz.js" type="module"></script>
-<script src="./sessao.js"></script>
+<!-- <script src="./sessao.js"></script> -->
 <script> 
     nome.innerHTML = `Olá ${sessionStorage.NOME_USUARIO}`;
 
@@ -144,118 +144,118 @@
     };
 
     // função pra scrollar pra baixo quando clica na navbar
-    $(document).ready(function(){
-        // Adiciona a função de rolagem suave para os links da barra de navegação
-        $(".navbar a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
+    // (document).ready(function(){
+    //     // Adiciona a função de rolagem suave para os links da barra de navegação
+    //     (".navbar a").on('click', function(event) {
+    //         if (this.hash !== "") {
+    //             event.preventDefault();
     
-                // Armazena o hash
-                var hash = this.hash;
+    //             // Armazena o hash
+    //             var hash = this.hash;
     
-                // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function(){
-                    // Adiciona o hash (#) à URL quando terminar de rolar
-                    window.location.hash = hash;
-                });
-            }
-        });
-    });
+    //             // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
+    //             $('html, body').animate({
+    //                 scrollTop: $(hash).offset().top
+    //             }, 800, function(){
+    //                 // Adiciona o hash (#) à URL quando terminar de rolar
+    //                 window.location.hash = hash;
+    //             });
+    //         }
+    //     });
+    // });
 
-    $(document).ready(function(){
-        // Adiciona a função de rolagem suave para os links da barra de navegação
-        $(".footer a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
+//     $(document).ready(function(){
+//         // Adiciona a função de rolagem suave para os links da barra de navegação
+//         $(".footer a").on('click', function(event) {
+//             if (this.hash !== "") {
+//                 event.preventDefault();
     
-                // Armazena o hash
-                var hash = this.hash;
+//                 // Armazena o hash
+//                 var hash = this.hash;
     
-                // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function(){
-                    // Adiciona o hash (#) à URL quando terminar de rolar
-                    window.location.hash = hash;
-                });
-            }
-        });
-    });
-</script>
+//                 // Usa a função animate() do jQuery para adicionar a animação de rolagem suave
+//                 $('html, body').animate({
+//                     scrollTop: $(hash).offset().top
+//                 }, 800, function(){
+//                     // Adiciona o hash (#) à URL quando terminar de rolar
+//                     window.location.hash = hash;
+//                 });
+//             }
+//         });
+//     });
+ </script>
 
 <script>
-    function cadastrar() {
-    aguardar();
+//     function cadastrar() {
+//     aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar =input_nome.value;
-    var emailVar = input_email.value;
+//     //Recupere o valor da nova input pelo nome do id
+//     // Agora vá para o método fetch logo abaixo
+//     var nomeVar =input_nome.value;
+//     var emailVar = input_email.value;
 
-      setInterval(sumirMensagem, 5000);
+//       setInterval(sumirMensagem, 5000);
         
       
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+//     // Enviando o valor da nova input
+//     fetch("/usuarios/cadastrar", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         // crie um atributo que recebe o valor recuperado aqui
+//         // Agora vá para o arquivo routes/usuario.js
+//         nomeServer: nomeVar,
+//         emailServer: emailVar,
+//         senhaServer: senhaVar
+//       }),
+//     })
+//       .then(function (resposta) {
+//         console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
-          // cardErro.style.display = "block";
+//         if (resposta.ok) {
+//           // cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+//           mensagem_erro.innerHTML =
+//             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-          setTimeout(() => {
-            window.location = "./login.html";
-          }, "2000");
+//           setTimeout(() => {
+//             window.location = "./login.html";
+//           }, "2000");
 
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
+//           limparFormulario();
+//           finalizarAguardar();
+//         } else {
+//           mensagem_erro.innerHTML = "Houve um erro ao tentar realizar o cadastro!";
+//         }
+//       })
+//       .catch(function (resposta) {
+//         console.log(`#ERRO: ${resposta}`);
+//         finalizarAguardar();
+//       });
 
-    return false;
-  }
+//     return false;
+//   }
 
-  function listar() {
-    // fetch("/empresas/listar", {
-    //   method: "GET",
-    // })
-    //   .then(function (resposta) {
-    //     resposta.json().then((empresas) => {
-    //       empresas.forEach((empresa) => {
-    //         listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-    //       });
-    //     });
-    //   })
-    //   .catch(function (resposta) {
-    //     console.log(`#ERRO: ${resposta}`);
-    //   });
-  }
+//   function listar() {
+//     // fetch("/empresas/listar", {
+//     //   method: "GET",
+//     // })
+//     //   .then(function (resposta) {
+//     //     resposta.json().then((empresas) => {
+//     //       empresas.forEach((empresa) => {
+//     //         listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+//     //       });
+//     //     });
+//     //   })
+//     //   .catch(function (resposta) {
+//     //     console.log(`#ERRO: ${resposta}`);
+//     //   });
+//   }
 
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
+//   function sumirMensagem() {
+//     cardErro.style.display = "none";
+//   }
 </script>
