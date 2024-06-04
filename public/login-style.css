@@ -114,6 +114,16 @@ button:hover{
 	}
 }
 
+#div_erros_login{
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    width: 200px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 .loading-div {
     animation: loading 1s;
     margin-left: 165px;

@@ -8,6 +8,14 @@
 </head>
 <body>
     <div class="game-board">
+        <div id="divReiniciar" style="display: none;">
+            <h1>Game over!</h1>
+            <span>Deseja reiniciar?</span>
+    
+            <button onclick="reiniciar()">Reiniciar</button>
+            <button onclick="sair()">Sair</button>
+        </div>
+
         <img src="../assets/jogo/james-personagem.gif" class="personagem">
         <img src="../assets/jogo/monstro.gif" class="monstro1">
     </div>
@@ -36,6 +44,7 @@
 
         const posicaomonstro1 = monstro1.offsetLeft;
         const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
+        console.log(`${posicaoPersonagem}`)
 
         if(posicaomonstro1 <= 55 && posicaomonstro1 > 0 && posicaoPersonagem < 81){
             monstro1.style.animation = 'none';
@@ -48,10 +57,17 @@
             personagem.style.width = '60px';
             personagem.style.marginLeft = '30px';
             personagem.style.marginBottom = '0';
+            divReiniciar.style.display = 'block';
 
             clearInterval(loop);
         }
-
-
     }, 10)
+
+    function sair(){
+        window.location = "./tela-inicial-jogo.html";
+    }
+
+    function reiniciar(){
+        window.location.reload();
+    }
 </script>

@@ -43,7 +43,7 @@
     {
         question: "Kill'em all foi o primeiro disco lançado pela banda, mas qual era a ideia original do nome?",
         answers: [
-            {option: "A cry from the edger", correct: false},
+            {option: "A cry from the edge", correct: false},
             {option: "Metal up your ass", correct: true},
             {option: "Evisceration plague", correct: false}
         ]
