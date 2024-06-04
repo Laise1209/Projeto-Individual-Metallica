@@ -44,6 +44,10 @@ body{
     padding: 5px 5px 5px 5px;
 }
 
+#menu a{
+    text-decoration: none;
+}
+
 #menu span:hover{
     cursor: pointer;
 }

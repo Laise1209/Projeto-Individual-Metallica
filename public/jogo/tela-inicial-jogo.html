@@ -11,6 +11,14 @@
     <title>Metallica - jogo</title>
 </head>
 <body>
+    <span id="menu-button">&#9776;</span>
+    <div id="menu">
+        <span onclick="sair()">Sair da conta</span>
+        <a href="../logado.html">
+            <span>Início</span>
+        </a>
+    </div>
+
     <h1>Escolha o personagem que você irá jogar:</h1>
     <div class="escolhaPersonagem">
         <div class=nomePersonagem onclick="iniciarJames()">
@@ -38,6 +46,23 @@
 </body>
 </html>
 <script>
+    
+    var menuButton = document.getElementById("menu-button");
+    var menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", function() {
+        if (menu.style.display == "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    });
+
+    function sair(){
+        window.location = "./login.html";
+        sessionStorage.clear();
+    };
+
     function iniciarJames(){
         window.location = "./personagem-james.html";
     }

@@ -8,15 +8,20 @@
 </head>
 <body>
     <div class="game-board">
+        <div id="divReiniciar" style="display: none;">
+            <h1>Game over!</h1>
+            <span>Deseja reiniciar?</span>
+    
+            <button>Reiniciar</button>
+        </div>
         <img src="../assets/jogo/kirk-personagem.gif" class="personagem">
         <img src="../assets/jogo/monstro3.gif" class="monstro">
     </div>
 
+    
 </body>
 </html>
 <script>
-
-
     const personagem = document.querySelector('.personagem');
     const monstro = document.querySelector('.monstro');
 
@@ -48,6 +53,7 @@
             personagem.style.width = '60px';
             personagem.style.marginLeft = '30px';
             personagem.style.marginBottom = '0';
+            divReiniciar.style.display = 'block';
 
             clearInterval(loop);
         }

@@ -4,13 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
-<body onload="exibirGrafico()">
-    <div id="grafico"></div>
+<body onload="exibirGrafico()" onpageshow="exibirGraficoEvolucao()">
+
+    <span id="menu-button">&#9776;</span>
+        <div id="menu">
+            <span onclick="sair()">Sair da conta</span>
+            <a href="./logado.html">
+                <span>Início</span>
+            </a>
+        </div>
+
+    <div class="grafico">
+        <h1>Placar de usuários:</h1>
+        <div id="grafico"></div>
+    </div>
+   
+    <div class="grafico">
+        <h1>Sua evolução:</h1>
+        <div id="graficoEvolucao"></div>
+    </div>
     
 </body>
 </html>
+<script>
+
+    var menuButton = document.getElementById("menu-button");
+    var menu = document.getElementById("menu");
+
+    menuButton.addEventListener("click", function() {
+        if (menu.style.display == "flex") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "flex";
+        }
+    });
+
+    function sair(){
+        window.location = "./login.html";
+        sessionStorage.clear();
+    };
+
+</script>
 <script>
 
     function exibirGrafico() {
@@ -52,16 +92,8 @@
                 label: 'Acertos',
                 data: [],
                 fill: false,
-                borderColor: '#97BE5A',
-                backgroundColor: '#97BE5A',
-                tension: 0.1
-            },
-            {
-                label: 'Erros',
-                data: [],
-                fill: false,
-                borderColor: '#FF0000',
-                backgroundColor: '#FF0000',
+                borderColor: '#393646',
+                backgroundColor: '#393646',
                 tension: 0.1
             }]
         };
@@ -84,6 +116,73 @@
         };
 
         let ctx = document.getElementById('myChartCanvas').getContext('2d');
-        let myChart = new Chart(ctx, config);
-            }
+        let myChart = new Chart(ctx, config);}
+</script>
+
+<script>
+    function exibirGraficoEvolucao() {
+        document.getElementById("graficoEvolucao").innerHTML += 
+            `<div id="graficoEvolucao">
+                <div class="graph">
+                    <canvas id="myChartCanvasEvolucao"></canvas>
+                </div>
+            </div>`
+        ;
+        obterDadosGraficoEvolucao();
+    }
+
+    function obterDadosGraficoEvolucao() {
+        fetch(`/evolucao/dadoEvolucao?idUsuarioServer=${sessionStorage.ID_USUARIO}`, { cache: 'no-store' })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        resposta.reverse();
+                        plotarGraficoEvolucao(resposta);
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function plotarGraficoEvolucao(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+
+        let labels = [];
+        let dados = {
+            labels: labels,
+            datasets: [{
+                label: 'Acertos',
+                data: [],
+                fill: false,
+                borderColor: '#393646',
+                backgroundColor: '#393646',
+                tension: 0.1
+            }]
+        };
+
+        console.log('Dados recebidos para plotar o gráfico:', resposta);
+
+        for (let i = 0; i < resposta.length; i++) {
+            var registro = resposta[i];
+            labels.push(registro.nome);
+            dados.datasets[0].data.push(registro.pontuacao);
+            // dados.datasets[1].data.push(registro.erros);
+        }
+
+        console.log('Labels:', labels);
+        console.log('Dados do Dataset:', dados.datasets);
+
+        const config = {
+            type: 'line',
+            data: dados,
+        };
+
+        let ctx = document.getElementById('myChartCanvasEvolucao').getContext('2d');
+        let myChart = new Chart(ctx, config);
+        } 
 </script>
