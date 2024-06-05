@@ -148,7 +148,7 @@ h1{
     height: 300px;
     padding-top: 50px;
     margin-left: 450px;
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 #divReiniciar span{
@@ -178,6 +178,32 @@ h1{
     background-color: #F4EEE0;
     color: #393646;
     cursor: pointer;
+}
+
+.placar{
+    display: flex;
+    background-color: #F4EEE0;
+    width: 150px;
+    height: 80px;
+    justify-content: space-around;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+    /* flex-direction: column; */
+}
+
+.placar{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #393646;
+}
+#pontos{
+    display: flex;
+    align-items: center;
+    color: #393646;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .vida{

@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="jogo.css">
     <title>Jump&Scape</title>
 </head>
-<body>
+
+<body onload="displayPontos()">
     <div class="game-board">
+        <div class="placar">
+            <span>Pontuação:</span>
+            <div id="pontos"></div>
+        </div>
         <div id="divReiniciar" style="display: none;">
             <h1>Game over!</h1>
             <span>Deseja reiniciar?</span>
-    
+
             <button onclick="reiniciar()">Reiniciar</button>
             <button onclick="sair()">Sair</button>
         </div>
@@ -21,7 +27,22 @@
     </div>
 
 </body>
+
 </html>
+<script>
+    var pontuacao = 0;
+
+    function displayPontos() {
+        pontuacao++
+        pontos.innerHTML = `${pontuacao}`;
+        console.log('pontuacao ' + pontuacao)
+    }
+
+    var pararPontos = setInterval(() => {
+        displayPontos()
+    }, 1000);
+
+</script>
 <script>
 
 
@@ -38,20 +59,18 @@
 
     document.addEventListener('keydown', pulo)
 
-
-
     const loop = setInterval(() => {
 
         const posicaomonstro1 = monstro1.offsetLeft;
         const posicaoPersonagem = +window.getComputedStyle(personagem).bottom.replace('px', '');
-        console.log(`${posicaoPersonagem}`)
+        // console.log(`${posicaoPersonagem}`)
 
-        if(posicaomonstro1 <= 55 && posicaomonstro1 > 0 && posicaoPersonagem < 81){
+        if (posicaomonstro1 <= 55 && posicaomonstro1 > 0 && posicaoPersonagem < 81) {
             monstro1.style.animation = 'none';
-            monstro1.style.left = `${posicaomonstro1}px`; 
+            monstro1.style.left = `${posicaomonstro1}px`;
 
             personagem.style.animation = 'none';
-            personagem.style.bottom = `${posicaoPersonagem}px`; 
+            personagem.style.bottom = `${posicaoPersonagem}px`;
 
             personagem.src = '../assets/jogo/personagem-caido.png';
             personagem.style.width = '60px';
@@ -60,14 +79,15 @@
             divReiniciar.style.display = 'block';
 
             clearInterval(loop);
+            clearInterval(pararPontos);
         }
     }, 10)
 
-    function sair(){
+    function sair() {
         window.location = "./tela-inicial-jogo.html";
     }
 
-    function reiniciar(){
+    function reiniciar() {
         window.location.reload();
     }
 </script>

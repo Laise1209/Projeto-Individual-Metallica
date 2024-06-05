@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="jogo.css">
     <title>Jump&Scape</title>
 </head>
-<body>
+<body onload="displayPontos()">
     <div class="game-board">
+        <div class="placar">
+            <span>Pontuação:</span>
+            <div id="pontos"></div>
+        </div>
         <div id="divReiniciar" style="display: none;">
             <h1>Game over!</h1>
             <span>Deseja reiniciar?</span>
@@ -21,6 +25,20 @@
 
 </body>
 </html>
+<script>
+    var pontuacao = 0;
+
+    function displayPontos() {
+        pontuacao++
+        pontos.innerHTML = `${pontuacao}`;
+        console.log('pontuacao ' + pontuacao)
+    }
+
+    var pararPontos = setInterval(() => {
+        displayPontos()
+    }, 1000);
+
+</script>
 <script>
 
 
@@ -57,7 +75,7 @@
             personagem.style.marginLeft = '30px';
             personagem.style.marginBottom = '0';
             divReiniciar.style.display = 'block';
-
+            clearInterval(pararPontos);
             clearInterval(loop);
         }
 
